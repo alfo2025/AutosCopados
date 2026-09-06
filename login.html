@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autos copados | log in</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a class="marca" href="index.html">autos copados</a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a  href="inicio.html">Inicio</a></li>
+                    <li><a class="activo" href="login.html">LOG IN</a></li>
+                    <li><a href="registro.html">Registrarse</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="introduccion" aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal">Bienvenido a autos copados</h1>
+            <p>ingresa tus datos para logearte!</p>
+        </section>
+
+       <section>
+         <form id="formulario-turno" class="formulario" action="#" method="post">
+            <div class="campo campo-ancho"><label for="nombre-apellido">Nombre de usuario</label><input id="nombre-apellido" name="nombre_apellido" type="text" required></div>
+             <div class="campo campo-ancho"><label for="nombre-apellido">clave</label><input id="nombre-apellido" name="nombre_apellido" type="text" required></div>
+             <div class="acciones-formulario"><button id="boton-guardar" class="boton" type="submit">Ingresar</button><button id="boton-limpiar" class="boton boton-secundario" type="reset">Limpiar</button></div>
+        </form>
+       </section>
+
+       
+
+        
+    </main>
+
+    <footer class="pie"><div class="contenedor"><p>autos copados - Proyecto PWM</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos Copados | Registro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a class="marca" href="index.html">autos copados</a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="login.html">LOG IN</a></li>
+                    <li><a class="activo" href="registro.html">Registrarse</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="contenedor contenido-angosto">
+        <h1>Registrar nuevo usuario</h1>
+        <p>Completá con tus datos</p>
+        <form id="formulario-turno" class="formulario" action="#" method="post">
+            
+            <div class="campo"><label for="nombre">Nombre</label><input id="nombre"
+                    name="nombre" type="text" required></div>
+            <div class="campo"><label for="apellido">Apellido</label><input id="apellido"
+                    name="apellido" type="text" required></div>
+            
+            <div class="campo campo-ancho">
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email" required>
+            </div>
+            <div class="campo"><label for="clave">Clave</label><input id="clave"
+                    name="clave" type="text" required></div>
+            <div class="campo"><label for="fecha">Fecha de nacimiento</label><input id="fecha" name="fecha" type="date" required>
+            </div>
+            
+            
+            <div class="acciones-formulario"><button id="boton-guardar" class="boton" type="submit">Registrarse</button><button id="boton-limpiar" class="boton boton-secundario"
+                    type="reset">Limpiar</button></div>
+        </form>
+    </main>
+    <footer class="pie">
+        <div class="contenedor">
+            <p>Autos Copados · Proyecto integrador de referencia PWM</p>
+        </div>
+    </footer>
+</body>
+
+</html>
