@@ -1,0 +1,19 @@
+.Pantalla{
+    margin: 0px 0px;
+    width: 100%;
+    height: 300px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.BotonB{
+    background-color: rgb(13, 145, 101);
+    border-style: 10px 10px rgb(1, 58, 39);
+    color: aliceblue;
+    width: 200px;
+    text-align: center;
+    margin: 0% 20%;
+}
