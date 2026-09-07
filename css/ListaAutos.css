@@ -5,7 +5,7 @@
         height: 90%;
             margin: 2% 0%;
         h3{
-            font-size: 160%;
+            font-size: 110%;
             padding: 0% 10%;
         }
         p{
@@ -14,7 +14,7 @@
             margin: 0%;
         }
         .Precio{
-            font-size: 200%;
+            font-size: 170%;
         }
 }
     
@@ -30,6 +30,7 @@
 .TargAuto{
     h3{
         color: aliceblue;
+        font-size: 120%;
     }
     width: 100%;
     height: 300px;
@@ -104,6 +105,9 @@
         padding: 0px 0px;
         font-size: 100%;
     }
+    .TargAuto.Vendedor{
+        height: 500px;
+    }
 
     .TargAutoInfo{  
         width: 100%;
@@ -125,6 +129,21 @@
         gap: 10px;
         grid-template-columns: repeat(2, 1fr);
 
+    }
+}
+
+.opcionVendedor{
+    margin: 0% 0.5%;
+    height: 40px;
+    background-color: rgb(0, 255, 128);
+    border: solid 4px;
+    border-color: rgb(4, 131, 4);
+    border-radius: 10px;
+}
+
+@media (min-width: 400px) {
+    .opcionVendedor{
+        margin: 0% 5%;
     }
 }
 
