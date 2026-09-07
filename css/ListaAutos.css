@@ -172,3 +172,9 @@
         "footer footer"
     }
 }
+
+.linkAuto {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

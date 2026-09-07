@@ -1,0 +1,36 @@
+.detalle-auto {
+    display: flex;
+    gap: 40px;
+    background-color: white;
+    padding: 30px;
+}
+
+.detalle-auto img {
+    width: 55%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.detalle-info {
+    width: 45%;
+}
+
+.detalle-info h1 {
+    margin-top: 0;
+}
+
+.detalle-info h2 {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .detalle-auto {
+        flex-direction: column;
+    }
+
+    .detalle-auto img,
+    .detalle-info {
+        width: 100%;
+    }
+}
