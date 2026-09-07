@@ -1,0 +1,155 @@
+
+
+.TargAutoInfo{
+        width: 55%;
+        height: 90%;
+            margin: 2% 0%;
+        h3{
+            font-size: 160%;
+            padding: 0% 10%;
+        }
+        p{
+            font-size: 130%;
+            padding: 0% 8%;
+            margin: 0%;
+        }
+        .Precio{
+            font-size: 200%;
+        }
+}
+    
+
+.ListadoTargAuto{
+    display: grid;
+    margin: 0% 0%;
+    gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    
+}
+
+.TargAuto{
+    h3{
+        color: aliceblue;
+    }
+    width: 100%;
+    height: 300px;
+    display: flex;
+    img{
+        width: 45%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.Busqueda{
+    display: flex;
+    margin: 10px;
+    h3{
+        margin: 10px;
+    }
+}
+
+.checkFiltro{
+    display: flex;
+    width: 100px;
+    align-items: center;
+    align-content: start;
+    input{
+        height: 20px;
+    }
+}
+
+.ConjuntoFiltro{
+    padding: 0px 30px;
+    background-color: rgb(246, 255, 240);
+    border-radius: 20px;
+}
+
+.listaMarcas{
+    display: none;
+}
+
+.Disponible{
+    background-color: rgb(7, 94, 65);
+    color: rgb(193, 253, 156);
+    div{
+        background-color: rgb(15, 176, 122);
+    }
+}
+
+.Baja{
+    background-color: rgb(94, 8, 7);
+    color: rgb(253, 214, 156);
+    div{
+        background-color: rgb(176, 53, 15);
+    }
+    
+}
+
+.TargAuto.Baja.CompradorVisual{
+    display: none;
+}
+
+
+ @media (min-width: 768px) {
+    .TargAuto{
+        display: block;
+            img{
+            width: 100%;
+            height: 66%;
+        }
+        width: 290px;
+        height: 455px;
+        
+        padding: 0px 0px;
+        font-size: 100%;
+    }
+
+    .TargAutoInfo{  
+        width: 100%;
+        height: 30%;
+        h3{
+            font-size: 100%;
+            margin: 0px;
+            padding: 0% 15%;
+        }
+
+        p{
+            font-size: 100%;
+            padding: 0% 10%;
+        }
+        
+    }
+ 
+    .ListadoTargAuto{
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (min-width: 978px) {
+    .ListadoTargAuto{
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+
+@media (min-width: 1168px) {
+    .contenedor{
+        margin: 0% 0%;
+    }
+
+    .listaMarcas{
+    display: block;
+    text-align: start;
+    }
+    .Contenido{
+        display: grid;
+        gap: 12px;
+        grid-template-areas:  
+        "nav div" 
+        "nav div" 
+        "footer footer"
+    }
+}
