@@ -34,3 +34,31 @@
         width: 100%;
     }
 }
+
+.NombreUsuarioComentador{
+    padding: 20px;
+    display: flex;
+    img{
+        width: 30px;
+        height: 30px;
+    }
+    h3{
+        margin: 4px 10px;
+    }
+}
+
+.comentario{
+    p{
+        margin: 0px 50px;
+    }
+    background-color: rgb(255, 244, 187);
+    border-radius: 20px;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.comentarios{
+    background-color: rgb(255, 204, 137);
+    border-radius: 20px;
+    padding: 5px;
+}
