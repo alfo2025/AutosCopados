@@ -83,6 +83,9 @@
 .Baja {
     background-color: rgb(94, 8, 7);
     color: rgb(253, 214, 156);
+    .accionesVendedor .opcionVendedor.BotonBaja{
+        display: none;
+    }
 }
 
 .Baja .TargAutoInfo {
