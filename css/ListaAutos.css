@@ -1,180 +1,219 @@
-
-
-.TargAutoInfo{
-        width: 55%;
-        height: 90%;
-            margin: 2% 0%;
-        h3{
-            font-size: 110%;
-            padding: 0% 10%;
-        }
-        p{
-            font-size: 130%;
-            padding: 0% 8%;
-            margin: 0%;
-        }
-        .Precio{
-            font-size: 170%;
-        }
+.TargAutoInfo {
+    width: 55%;
+    height: 90%;
+    margin: 2% 0;
 }
-    
 
-.ListadoTargAuto{
+.TargAutoInfo h3 {
+    font-size: 110%;
+    padding: 0 10%;
+}
+
+.TargAutoInfo p {
+    font-size: 130%;
+    padding: 0 8%;
+    margin: 0;
+}
+
+.TargAutoInfo .Precio {
+    font-size: 170%;
+}
+
+.ListadoTargAuto {
     display: grid;
-    margin: 0% 0%;
-    gap: 5px;
-    grid-template-columns: repeat(1, 1fr);
-    
+    gap: 10px;
+    grid-template-columns: 1fr;
 }
 
-.TargAuto{
-    h3{
-        color: aliceblue;
-        font-size: 120%;
-    }
+.TargAuto {
     width: 100%;
     height: 300px;
     display: flex;
-    img{
-        width: 45%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
 
-.Busqueda{
+.TargAuto h3 {
+    color: aliceblue;
+    font-size: 120%;
+}
+
+.TargAuto img {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Busqueda {
     display: flex;
     margin: 10px;
-    h3{
-        margin: 10px;
-    }
 }
 
-.checkFiltro{
+.Busqueda h3 {
+    margin: 10px;
+}
+
+.checkFiltro {
     display: flex;
     width: 100px;
     align-items: center;
-    align-content: start;
-    input{
-        height: 20px;
-    }
 }
 
-.ConjuntoFiltro{
-    padding: 0px 30px;
+.checkFiltro input {
+    height: 20px;
+}
+
+.ConjuntoFiltro {
+    padding: 0 30px;
     background-color: rgb(246, 255, 240);
     border-radius: 20px;
 }
 
-.listaMarcas{
+.listaMarcas {
     display: none;
 }
 
-.Disponible{
+.Disponible {
     background-color: rgb(7, 94, 65);
     color: rgb(193, 253, 156);
-    div{
-        background-color: rgb(15, 176, 122);
-    }
 }
 
-.Baja{
+.Disponible .TargAutoInfo {
+    background-color: rgb(15, 176, 122);
+}
+
+.Baja {
     background-color: rgb(94, 8, 7);
     color: rgb(253, 214, 156);
-    div{
-        background-color: rgb(176, 53, 15);
-    }
-    
 }
 
-.TargAuto.Baja.CompradorVisual{
+.Baja .TargAutoInfo {
+    background-color: rgb(176, 53, 15);
+}
+
+.TargAuto.Baja.CompradorVisual {
     display: none;
-}
-
-
- @media (min-width: 768px) {
-    .TargAuto{
-        display: block;
-            img{
-            width: 100%;
-            height: 66%;
-        }
-        width: 290px;
-        height: 455px;
-        
-        padding: 0px 0px;
-        font-size: 100%;
-    }
-    .TargAuto.Vendedor{
-        height: 500px;
-    }
-
-    .TargAutoInfo{  
-        width: 100%;
-        height: 30%;
-        h3{
-            font-size: 100%;
-            margin: 0px;
-            padding: 0% 15%;
-        }
-
-        p{
-            font-size: 100%;
-            padding: 0% 10%;
-        }
-        
-    }
- 
-    .ListadoTargAuto{
-        gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-}
-
-.opcionVendedor{
-    margin: 0% 0.5%;
-    height: 40px;
-    background-color: rgb(0, 255, 128);
-    border: solid 4px;
-    border-color: rgb(4, 131, 4);
-    border-radius: 10px;
-}
-
-@media (min-width: 400px) {
-    .opcionVendedor{
-        margin: 0% 5%;
-    }
-}
-
-@media (min-width: 978px) {
-    .ListadoTargAuto{
-        grid-template-columns: repeat(3, 1fr);
-
-    }
-}
-
-@media (min-width: 1168px) {
-    .contenedor{
-        margin: 0% 0%;
-    }
-
-    .listaMarcas{
-    display: block;
-    text-align: start;
-    }
-    .Contenido{
-        display: grid;
-        gap: 12px;
-        grid-template-areas:  
-        "nav div" 
-        "nav div" 
-        "footer footer"
-    }
 }
 
 .linkAuto {
     text-decoration: none;
     color: inherit;
     display: block;
+}
+
+.accionesVendedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 14px 20px 18px;
+}
+
+.opcionVendedor {
+    min-height: 42px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #0b6670;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcionVendedor:hover {
+    background-color: #084d55;
+}
+
+.verDetalles {
+    grid-column: 1 / -1;
+    background-color: white;
+    color: #0b6670;
+    border: 2px solid #0b6670;
+}
+
+.verDetalles:hover {
+    background-color: #e6f1f2;
+}
+
+.accionesVendedor button:first-of-type {
+    background-color: #0b6670;
+}
+
+.accionesVendedor button:first-of-type:hover {
+    background-color: #084d55;
+}
+
+.accionesVendedor button:last-child {
+    background-color: #b83232;
+}
+
+.accionesVendedor button:last-child:hover {
+    background-color: #8f2424;
+}
+
+@media (min-width: 768px) {
+
+    .TargAuto {
+        display: block;
+        width: 290px;
+        height: 455px;
+        font-size: 100%;
+    }
+
+    .TargAuto img {
+        width: 100%;
+        height: 66%;
+    }
+
+    .TargAuto.Vendedor {
+        height: 590px;
+    }
+
+    .TargAuto.Vendedor img {
+        height: 300px;
+    }
+
+    .TargAutoInfo {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .TargAutoInfo h3 {
+        font-size: 100%;
+        margin: 0;
+        padding: 0 15%;
+    }
+
+    .TargAutoInfo p {
+        font-size: 100%;
+        padding: 0 10%;
+    }
+
+    .ListadoTargAuto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 978px) {
+
+    .ListadoTargAuto {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1168px) {
+
+    .listaMarcas {
+        display: block;
+        text-align: start;
+    }
+
+    .Contenido {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: auto 1fr;
+    }
 }
