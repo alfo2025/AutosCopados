@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>autos copados | log in</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/LoginRegistrase.css">
 </head>
 <body>
     <header class="cabecera">
@@ -29,17 +30,24 @@
 
        <section>
          <form id="formulario-turno" class="formulario" action="#" method="post">
-            <div class="campo campo-ancho"><label for="nombre-apellido">Nombre de usuario</label><input id="nombre-apellido" name="nombre_apellido" type="text" required></div>
-             <div class="campo campo-ancho"><label for="nombre-apellido">clave</label><input id="nombre-apellido" name="nombre_apellido" type="text" required></div>
-             <div class="acciones-formulario"><button id="boton-guardar" class="boton" type="submit">Ingresar</button><button id="boton-limpiar" class="boton boton-secundario" type="reset">Limpiar</button></div>
+            <div class="campo campo-ancho">
+                <label for="nombre-usuario">Nombre de usuario</label>
+                <input id="nombre-usuario" name="nombre-usuario" type="text" required>
+            </div>
+            <div class="campo campo-ancho">
+                <label for="clave-usuario">clave</label>
+                <input id="clave-usuario" name="clave-usuario" type="text" required>
+            </div>
+            <p id="MensajeAprobacion" class="">Ingrese los datos para ingesar a la secion</p>
+            <div class="acciones-formulario">
+                <button id="boton-guardar" class="boton" type="submit">Ingresar</button>
+                <button id="boton-limpiar" class="boton boton-secundario" type="reset">Limpiar</button>
+            </div>
         </form>
        </section>
-
-       
-
-        
     </main>
 
     <footer class="pie"><div class="contenedor"><p>autos copados - Proyecto PWM</p></div></footer>
+    <script src="./js/login.js"></script>
 </body>
 </html>
