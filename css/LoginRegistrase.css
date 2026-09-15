@@ -1,3 +1,7 @@
 .Invalido{
     color: red;
 }
+
+.oculto{
+    display: none;
+}
