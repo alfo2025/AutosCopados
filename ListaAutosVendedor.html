@@ -23,6 +23,14 @@
     </header>
 
     <main class="">
+        <div id="PerfilVendedor">
+            <img src="./img/usuario.png" alt="">
+            <div>
+                <h2>Nombre de usuario</h2>
+                <p>autos vendidos: 0</p>
+                <p>total de autos: 6</p>
+            </div>
+        </div>
         <h2>Gestion de publicaciones</h2>
         <div class="Busqueda">
             <h3>Buscar: </h3>
@@ -74,14 +82,13 @@
             <h3>Toyota • Corolla Cross</h3>
             <p>Precio:</p>
             <p class="Precio"><strong>$42.212.000</strong></p>
-            <p>vendedor: <strong>Alejandro Stoessel</strong></p>
 
             <div class="accionesVendedor">
                 <a href="detalleAuto.html" class="opcionVendedor verDetalles">
                     Ver detalles
                 </a>
                 <button class="opcionVendedor">Modificar</button>
-                <button class="opcionVendedor">Eliminar</button>
+                <button class="opcionVendedor EliminarColor">Eliminar</button>
             </div>
         </div>
     </article>
@@ -94,34 +101,33 @@
             <h3>Chevrolet • Tracker</h3>
             <p>Precio:</p>
             <p class="Precio"><strong>$33.632.000</strong></p>
-            <p>vendedor: <strong>Diego Silupu</strong></p>
 
             <div class="accionesVendedor">
                 <a href="detalleAuto.html" class="opcionVendedor verDetalles">
                     Ver detalles
                 </a>
                 <button class="opcionVendedor">Modificar</button>
-                <button class="opcionVendedor">Eliminar</button>
+                <button class="opcionVendedor EliminarColor">Eliminar</button>
             </div>
         </div>
     </article>
 
 
     <article class="TargAuto Baja Vendedor">
-        <img src="./img/imagen3.webp" alt="Volkswagen Nivus" width="300" height="200">
+        <img src="./img/imagen4.webp" alt="Volkswagen Nivus" width="300" height="200">
 
         <div class="TargAutoInfo">
-            <h3>Volkswagen • Nivus</h3>
+            <h3>Zero • Nivus</h3>
             <p>Precio:</p>
             <p class="Precio"><strong>$31.252.000</strong></p>
-            <p>vendedor: <strong>Juan Carlos</strong></p>
-
+            <P>Diste de baja</P>
+            
             <div class="accionesVendedor">
                 <a href="detalleAuto.html" class="opcionVendedor verDetalles">
                     Ver detalles
                 </a>
                 <button class="opcionVendedor">Modificar</button>
-                <button class="opcionVendedor">Eliminar</button>
+                <button class="opcionVendedor EliminarColor">Eliminar</button>
             </div>
         </div>
     </article>
@@ -134,14 +140,13 @@
             <h3>Mercedes Benz • Clase C</h3>
             <p>Precio:</p>
             <p class="Precio"><strong>$58.900.000</strong></p>
-            <p>vendedor: <strong>Susana Gimenez</strong></p>
 
             <div class="accionesVendedor">
                 <a href="detalleAuto.html" class="opcionVendedor verDetalles">
                     Ver detalles
                 </a>
                 <button class="opcionVendedor">Modificar</button>
-                <button class="opcionVendedor">Eliminar</button>
+                <button class="opcionVendedor EliminarColor">Eliminar</button>
             </div>
         </div>
     </article>
@@ -154,14 +159,13 @@
             <h3>Chevrolet • Tracker</h3>
             <p>Precio:</p>
             <p class="Precio"><strong>$35.780.000</strong></p>
-            <p>vendedor: <strong>Alfonso Ko</strong></p>
 
             <div class="accionesVendedor">
                 <a href="detalleAuto.html" class="opcionVendedor verDetalles">
                     Ver detalles
                 </a>
                 <button class="opcionVendedor">Modificar</button>
-                <button class="opcionVendedor">Eliminar</button>
+                <button class="opcionVendedor EliminarColor">Eliminar</button>
             </div>
         </div>
     </article>
@@ -174,22 +178,27 @@
             <h3>Volkswagen • Nivus</h3>
             <p>Precio:</p>
             <p class="Precio"><strong>$29.990.000</strong></p>
-            <p>vendedor: <strong>Santi Gauna</strong></p>
-
+            <P>Diste de baja</P>
             <div class="accionesVendedor">
                 <a href="detalleAuto.html" class="opcionVendedor verDetalles">
                     Ver detalles
                 </a>
                 <button class="opcionVendedor">Modificar</button>
-                <button class="opcionVendedor">Eliminar</button>
+                <button class="opcionVendedor EliminarColor">Eliminar</button>
             </div>
         </div>
     </article>
-
+    
 </section>
         </div>
     </main>
-
+    <div id="CartelEliminar" class="Oculto">
+        <h2>Deseas Eliminar este Auto</h2>
+        <div id="CartelEliminarOpciones">
+            <button class="opcionSN">Si</button>
+            <button class="opcionSN">No</button>
+        </div>
+    </div>
     <footer class="pie"><div class="contenedor"><p>autos copados - Proyecto PWM</p></div></footer>
 </body>
 </html>
