@@ -1,15 +1,18 @@
-const PatronCorreo = /[a-z]\/@\/(a:z)\/.com/
+const PatronCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 const correo = document.querySelector("#correo-usuario")
 const mensaje = document.querySelector("#MensajeAprobacion")
 const mensajeCorreo = document.querySelector("#MensajeCorreo")
 
 function validarCorrreo() {
     const CorreoLimpio = correo.value.trim()
-    const condicion = false
+    let condicion = false
 
     if(CorreoLimpio.length >= 3)
-        if(PatronCorreo.test(correo)){
+        if(PatronCorreo.test(CorreoLimpio)){
             condicion = true
+            mensajeCorreo.textContent = "Mail ingresado de manera correcta"
+            mensajeCorreo.classList.toggle("oculto")
+            mensajeCorreo.classList.toggle("valido")
         }
         else{
             mensajeCorreo.textContent = "Error, no escribio bien el correo"

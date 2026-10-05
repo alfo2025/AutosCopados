@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Detalle del Auto</title>
 
     <link rel="stylesheet" href="css/estilos.css">
@@ -14,126 +15,205 @@
 
     <header class="cabecera">
         <div class="contenedor cabecera-contenido">
-            <a class="marca" href="index.html">autos copados</a>
+
+            <a class="marca" href="inicio.html">
+                autos copados
+            </a>
 
             <nav>
                 <ul class="menu">
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="login.html">LOG IN</a></li>
-                    <li><a href="registro.html">Registrarse</a></li>
+
+                    <li>
+                        <a href="inicio.html">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="login.html">LOG IN</a>
+                    </li>
+
+                    <li>
+                        <a href="registro.html">Registrarse</a>
+                    </li>
+
                 </ul>
             </nav>
+
         </div>
     </header>
+
 
     <main class="DetalleAuto">
 
         <section class="detalle-auto">
 
-            <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
+            <img
+                id="imagenAuto"
+                src=""
+                alt="Imagen del auto"
+            >
 
             <div class="detalle-info">
 
-                <h1>Toyota Corolla Cross</h1>
+                <h1 id="nombreAuto"></h1>
 
-                <h2>$42.212.000</h2>
+                <h2 id="precioAuto"></h2>
 
-                <p><strong>Marca:</strong> Toyota</p>
-                <p><strong>Modelo:</strong> Corolla Cross</p>
-                <p><strong>Año:</strong> 2023</p>
-                <p><strong>Kilómetros:</strong> 25.000 km</p>
-                <p><strong>Combustible:</strong> Nafta</p>
-                <p><strong>Transmisión:</strong> Automática</p>
-                <p><strong>Vendedor:</strong> Alonsodsas</p>
+                <p>
+                    <strong>Marca:</strong>
+                    <span id="marcaAuto"></span>
+                </p>
 
-                <a class="boton" href="">
-                    Comprar Ahora
-                </a>
-                <a class="boton" href="">
-                    Agregar al Carrito
-                </a>
+                <p>
+                    <strong>Modelo:</strong>
+                    <span id="modeloAuto"></span>
+                </p>
+
+                <p>
+                    <strong>Año:</strong>
+                    <span id="anioAuto"></span>
+                </p>
+
+                <p>
+                    <strong>Kilómetros:</strong>
+                    <span id="kilometrosAuto"></span>
+                </p>
+
+                <p>
+                    <strong>Combustible:</strong>
+                    <span id="combustibleAuto"></span>
+                </p>
+
+                <p>
+                    <strong>Transmisión:</strong>
+                    <span id="transmisionAuto"></span>
+                </p>
+
+                <p>
+                    <strong>Vendedor:</strong>
+                    <span id="vendedorAuto"></span>
+                </p>
+
+
+                <!-- OPCIONES DEL COMPRADOR -->
+
+                <div id="opcionesComprador" class="oculto">
+
+                    <a class="boton" href="#">
+                        Comprar Ahora
+                    </a>
+
+                    <a class="boton" href="#">
+                        Agregar al Carrito
+                    </a>
+
+                </div>
+
+
+                <!-- OPCIONES DEL VENDEDOR -->
+
+                <div id="opcionesVendedor" class="oculto">
+
+                    <button class="boton">
+                        Modificar
+                    </button>
+
+                    <button class="boton">
+                        Eliminar
+                    </button>
+
+                </div>
+
+
+                <!-- OPCIONES DEL ADMINISTRADOR -->
+
+                <div id="opcionesAdministrador" class="oculto">
+
+                    <button class="boton">
+                        Modificar publicación
+                    </button>
+
+                    <button class="boton">
+                        Eliminar publicación
+                    </button>
+
+                    <button class="boton">
+                        Dar de baja
+                    </button>
+
+                </div>
 
             </div>
-        
+
         </section>
+
+
         <div id="PreguntasComentarios">
 
             <section>
+
                 <form action="#" method="post" id="Pregunta">
+
                     <div>
-                        <Label for="PreguntaComprador">Pregunta:</Label>
-                        <input type="text" name="PreguntaComprador" id="PreguntaComprador" required>
+
+                        <label for="PreguntaComprador">
+                            Pregunta:
+                        </label>
+
+                        <input
+                            type="text"
+                            name="PreguntaComprador"
+                            id="PreguntaComprador"
+                            required
+                        >
+
                     </div>
-                    <button id="boton-guardar" class="boton" type="submit">Enviar</button>
+
+                    <button
+                        id="boton-guardar"
+                        class="boton"
+                        type="submit"
+                    >
+                        Enviar
+                    </button>
+
                 </form>
+
                 <a class="boton">
-                        Ver Preguntas
+                    Ver Preguntas
                 </a>
+
             </section>
-            <main>
+
+
+            <section>
+
                 <div class="comentarios">
+
                     <h2>Comentarios</h2>
-                    <div class="comentario">                    
-                        <div class="NombreUsuarioComentador">
-                            <img src="./img/usuario.png" alt="">
-                            <h3>Guerrero Ramires</h3>
-                            <p>19/03/2025</p>
-                        </div>
-                        <p>Cuantos años de uso tiene?</p>
-                    </div>
-                    <div class="comentario">                    
-                        <div class="NombreUsuarioComentador">
-                            <img src="./img/usuario.png" alt="">
-                            <h3>Santiago Dorrego</h3>
-                            <p>19/03/2025</p>
-                        </div>
-                        <p>Podria llevar un monton de niños en esa camineta, por curiosidad claro?</p>
-                    </div>
-                    <div class="comentario">                    
-                        <div class="NombreUsuarioComentador">
-                            <img src="./img/usuario.png" alt="">
-                            <h3>Gun stadion</h3>
-                            <p>19/03/2025</p>
-                        </div>
-                        <p>Cuantos años de uso tiene?</p>
-                    </div>
-                    <div class="comentario">                    
-                        <div class="NombreUsuarioComentador">
-                            <img src="./img/usuario.png" alt="">
-                            <h3>Ign dragon</h3>
-                            <p>19/03/2025</p>
-                        </div>
-                        <p>Es todo Terreno?</p>
-                    </div>
-                    <div class="comentario">                    
-                        <div class="NombreUsuarioComentador">
-                            <img src="./img/usuario.png" alt="">
-                            <h3>Rodrigues Guevara</h3>
-                            <p>19/03/2025</p>
-                        </div>
-                        <p>Ta bien feo, como esta pagina, no hay rebajas?</p>
-                    </div>
-                    <div class="comentario">                    
-                        <div class="NombreUsuarioComentador">
-                            <img src="./img/usuario.png" alt="">
-                            <h3>Ramires Espinosa</h3>
-                            <p>19/03/2025</p>
-                        </div>
-                        <p>Joder vosotrois soy muy careros, encima se nota que esta usado, tiene una avolladura por detras de la puerta, no se puede mejorar?</p>
-                    </div>
-                    
+
+                    <div id="listaComentarios"></div>
+
                 </div>
-            </main>
+
+            </section>
+
         </div>
-        
 
     </main>
 
+
     <footer class="pie">
         <div class="contenedor">
-            <p>autos copados - Proyecto PWM</p>
+
+            <p>
+                autos copados - Proyecto PWM
+            </p>
+
         </div>
     </footer>
+
+
+    <script src="./js/detalleAuto.js"></script>
 
 </body>
 

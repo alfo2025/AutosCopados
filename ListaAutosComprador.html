@@ -10,7 +10,7 @@
 <body>
     <header class="cabecera">
         <div class="contenedor cabecera-contenido">
-            <a class="marca" href="index.html">autos copados</a>
+            <a class="marca" href="inicio.html">autos copados</a>
             <nav aria-label="Navegación principal">
                 <ul class="menu">
                     <li><a class="activo" href="inicio.html">Inicio</a></li>
@@ -32,7 +32,7 @@
             <nav class="Filtro">
                 <h3>Filtros:</h3>
                 <div class="ConjuntoFiltro">
-                    <h3>Marcas</h4>
+                    <h3>Marcas</h3>
                     <div class="listaMarcas">
                         <div class="checkFiltro">
                             <input type="checkbox" name="Ford" id="">
@@ -65,67 +65,98 @@
                     </div>
                 </div>
             </nav>
-            <section class="ListadoTargAuto">
-                <a href="detalleAuto.html" class="linkAuto">
-                <article class="TargAuto Disponible">
-                    <img src="./img/imagen1.webp" alt="autito 1">
-                    <div class="TargAutoInfo">
-                        <h3>Toyota • Corolla Cross</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$42.212.000</strong> </p>
-                        <p>vendedor: <strong>Alonsodsas</strong></p>
-    
-                    </div>
-                </article>
-                </a>
-                <article class="TargAuto Disponible">
-                    <img src="./img/imagen2.webp" alt="autito 1" width="300" height="200">
-                    <div class="TargAutoInfo">
-                        <h3>Chevrolet • Tracker</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$33.632.000</strong> </p>
-                        <p>vendedor: <strong>RomeroRam</strong></p>
-                    </div>
-                </article>
-                <article class="TargAuto Baja CompradorVisual">
-                    <img src="./img/imagen3.webp" alt="autito 1" width="300" height="200">
-                    <div class="TargAutoInfo">
-                        <h3>Volkswagen • Nivus</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$31.252.000</strong> </p>
-                        <p>vendedor: <strong>JuanCarlos</strong></p>
-                    </div>
-                </article>
-                <article class="TargAuto Disponible">
-                    <img src="./img/imagen4.webp" alt="autito 1">
-                    <div class="TargAutoInfo">
-                        <h3>Mercedes Benz • Clase C</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$42.212.000</strong> </p>
-                        <p>vendedor: <strong>Alonsodsas</strong></p>
-    
-                    </div>
-                </article>
-                <article class="TargAuto Disponible">
-                    <img src="./img/imagen2.webp" alt="autito 1" width="300" height="200">
-                    <div class="TargAutoInfo">
-                        <h3>Chevrolet • Tracker</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$33.632.000</strong> </p>
-                        <p>vendedor: <strong>RomeroRam</strong></p>
-                    </div>
-                </article>
-                <article class="TargAuto Baja CompradorVisual">
-                    <img src="./img/imagen3.webp" alt="autito 1" width="300" height="200">
-                    <div class="TargAutoInfo">
-                        <h3>Volkswagen • Nivus</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$31.252.000</strong> </p>
-                        <p>vendedor: <strong>JuanCarlos</strong></p>
-                    </div>
-                </article>
-                
-            </section>
+
+
+           <section class="ListadoTargAuto">
+
+    <a href="detalleAuto.html?id=1&rol=comprador" class="linkAuto">
+        <article class="TargAuto Disponible">
+            <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
+
+            <div class="TargAutoInfo">
+                <h3>Toyota • Corolla Cross</h3>
+                <p>Precio:</p>
+                <p class="Precio"><strong>$42.212.000</strong></p>
+                <p>vendedor: <strong>Alonsodsas</strong></p>
+            </div>
+        </article>
+    </a>
+
+
+    <a href="detalleAuto.html?id=2&rol=comprador" class="linkAuto">
+        <article class="TargAuto Disponible">
+            <img src="./img/imagen2.webp" alt="Chevrolet Tracker">
+
+            <div class="TargAutoInfo">
+                <h3>Chevrolet • Tracker</h3>
+                <p>Precio:</p>
+                <p class="Precio"><strong>$33.632.000</strong></p>
+                <p>vendedor: <strong>RomeroRam</strong></p>
+            </div>
+        </article>
+    </a>
+
+
+    <a href="detalleAuto.html?id=3&rol=comprador" class="linkAuto">
+        <article class="TargAuto Baja CompradorVisual">
+            <img src="./img/imagen3.webp" alt="Volkswagen Nivus">
+
+            <div class="TargAutoInfo">
+                <h3>Volkswagen • Nivus</h3>
+                <p>Precio:</p>
+                <p class="Precio"><strong>$31.252.000</strong></p>
+                <p>vendedor: <strong>JuanCarlos</strong></p>
+            </div>
+        </article>
+    </a>
+
+
+    <a href="detalleAuto.html?id=4&rol=comprador" class="linkAuto">
+        <article class="TargAuto Disponible">
+            <img src="./img/imagen4.webp" alt="Mercedes Benz Clase C">
+
+            <div class="TargAutoInfo">
+                <h3>Mercedes Benz • Clase C</h3>
+                <p>Precio:</p>
+                <p class="Precio"><strong>$42.212.000</strong></p>
+                <p>vendedor: <strong>Alonsodsas</strong></p>
+            </div>
+        </article>
+    </a>
+
+
+    <a href="detalleAuto.html?id=5&rol=comprador" class="linkAuto">
+        <article class="TargAuto Disponible">
+            <img src="./img/imagen5.webp" alt="Suzuki Jimny">
+
+            <div class="TargAutoInfo">
+                <h3>BYD • Dolphin</h3>
+                <p>Precio:</p>
+                <p class="Precio"><strong>$35.780.000</strong></p>
+                <p>vendedor: <strong>Alfonso Ko</strong></p>
+            </div>
+        </article>
+    </a>
+
+
+    <a href="detalleAuto.html?id=6&rol=comprador" class="linkAuto">
+        <article class="TargAuto Disponible">
+            <img src="./img/imagen3.webp" alt="Volkswagen Nivus">
+
+            <div class="TargAutoInfo">
+                <h3>Volkswagen • Nivus</h3>
+                <p>Precio:</p>
+                <p class="Precio"><strong>$29.990.000</strong></p>
+                <p>vendedor: <strong>Santi Gauna</strong></p>
+            </div>
+        </article>
+    </a>
+
+</section>
+
+
+
+
         </div>
     </main>
 

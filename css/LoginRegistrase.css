@@ -5,3 +5,8 @@
 .oculto{
     display: none;
 }
+
+
+.valido{
+    color:green
+}
