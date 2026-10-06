@@ -25,3 +25,25 @@ input{
 .Validado{
     background-color: rgb(143, 245, 53);
 }
+
+.titulo .icono{
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.cumpleIMG{
+    width: 100px;
+    object-position: -6px -13px;
+}
+
+.NOcumpleIMG{
+    width: 100px;
+    object-position: -51px -13px;
+}
+
+
+.titulo{
+    display: flex;
+}

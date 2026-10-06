@@ -5,6 +5,7 @@ const mensajeCorreo = document.querySelector("#MensajeCorreo")
 const claveInput =document.querySelector("#clave-usuario")
 let claveValida = false
 const mensajeClave = document.querySelector('#MensajeClave')
+const iconosValidacion = document.getElementsByClassName('.iconoIMG')
 
 function validarCorrreo() {
     const CorreoLimpio = correoInput.value.trim()
@@ -23,6 +24,7 @@ function validarCorrreo() {
             mensajeCorreo.classList.remove("oculto")
             mensajeCorreo.classList.add("Invalido")
             correoInput.classList.add("advertencia")
+            
         }
     else{
         mensajeCorreo.textContent ="Error, no pusite la cantidad nesesaria"
