@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar auto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/PublicacionModificacionAuto.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a class="marca" href="inicio.html">autos copados</a>
+            <nav aria-label="Navegación principal">
+                <ul class="menu">
+                    <li><a class="activo" href="inicio.html">Inicio</a></li>
+                    <li><a  href="login.html">LOG IN</a></li>
+                    <li><a href="registro.html">Registrarse</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Rellene los datos</h1>
+        <section class="caja">
+            <form action="" method="post">
+                <div class="Seccion" id="Imagen">
+                    <img src="./img/SeleccionAuto.avif" alt="">
+                    <input type="file" name="" id="" required>
+                </div>
+                <div id="ConjuntoDatos">
+
+                    <div class="Seccion" id="Nombre">
+                        <label for="nombre">Nombre del Auto:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+    
+                    <div class="Seccion">
+                        <label for="año">Año:</label>
+                        <input type="date" name="" id="" required>
+                    </div>
+                    <div class="Seccion" id="kilometros">
+                        <label for="kilometros">Kilometros: </label>
+                        <div class="Seccion">
+                            <input type="number" required>
+                            <p>km</p>
+                        </div>
+                    </div>
+                    <div class="Seccion">
+                        <label for="marca">Marca: </label>
+                        <select name="marca" id="marca">
+                            <option value="" selected disabled hidden>Seleccione una Marca</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Ford">Ford</option>
+                            <option value="MercedesBenz">Mercedes Benz</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Peugeot">Peugeot</option>
+                            <option value="Smart">Smart</option>
+                            <option value="Audi">Audi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="pie"><div class="contenedor"><p>autos copados - Proyecto PWM</p></div></footer>
+</body>
+</html>
