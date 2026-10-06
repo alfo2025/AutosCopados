@@ -10,3 +10,18 @@
 .valido{
     color:green
 }
+
+input{
+    border-style: none;
+    background-color: cadetblue;
+    border-radius: 20px;
+    color: aliceblue;
+}
+
+.advertencia{
+    background-color: darkred;
+}
+
+.Validado{
+    background-color: rgb(143, 245, 53);
+}
