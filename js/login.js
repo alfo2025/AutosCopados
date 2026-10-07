@@ -3,34 +3,28 @@ const correoInput = document.querySelector("#correo-usuario")
 const mensaje = document.querySelector("#MensajeAprobacion")
 const mensajeCorreo = document.querySelector("#MensajeCorreo")
 const claveInput =document.querySelector("#clave-usuario")
-let claveValida = false
+let claveValida = false;
+let correoValido = false;
 const mensajeClave = document.querySelector('#MensajeClave')
-const iconosValidacion = document.getElementsByClassName('.iconoIMG')
+const iconosValidacion = document.getElementsByClassName('iconoIMG')
 
 function validarCorrreo() {
     const CorreoLimpio = correoInput.value.trim()
-    let condicion = false
 
     if(CorreoLimpio.length >= 3)
         if(PatronCorreo.test(CorreoLimpio)){
-            condicion = true
-            mensajeCorreo.textContent = "Mail ingresado de manera correcta"
-            mensajeCorreo.classList.remove("oculto")
-            mensajeCorreo.classList.add("valido")
-            correoInput.classList.remove("advertencia")
+            correoValido = true
+            cambiarVisual(correoValido, iconosValidacion[0], correoInput, mensajeCorreo,'Mail ingresado de manera correcta')
         }
         else{
-            mensajeCorreo.textContent = "Error, no escribio bien el correo"
-            mensajeCorreo.classList.remove("oculto")
-            mensajeCorreo.classList.add("Invalido")
-            correoInput.classList.add("advertencia")
+            correoValido = false
+            mensajeCorreo.textContent = ""
+            cambiarVisual(correoValido, iconosValidacion[0], correoInput, mensajeCorreo,'Error, no escribio bien el correo')
             
         }
     else{
-        mensajeCorreo.textContent ="Error, no pusite la cantidad nesesaria"
-        mensajeCorreo.classList.remove("oculto")
-        mensajeCorreo.classList.add("Invalido")
-        correoInput.classList.add("advertencia")
+        correoValido = false
+        cambiarVisual(correoValido, iconosValidacion[0], correoInput, mensajeCorreo,'Error, no pusite la cantidad nesesaria')
     }
 
     return condicion
@@ -44,20 +38,37 @@ function validarClave(){
     }
 
     if(claveLimpio.length >= 8){
-        mensajeClave.classList.add("valido")
-        mensajeClave.classList.remove("Invalido")
-        mensajeClave.textContent = "clave valida"
         claveValida = true
-        claveInput.classList.remove("advertencia")
+        cambiarVisual(claveValida, iconosValidacion[1], claveInput, mensajeClave, "clave valida")
     }
     else{
-        claveInput.classList.add("advertencia")
-        mensajeClave.classList.remove("valido")
-        mensajeClave.classList.add("Invalido")
-        mensajeClave.textContent = "La contraseña debe ser mayor a 8 caracteres"
         claveValida = false
+        cambiarVisual(claveValida, iconosValidacion[1], claveInput, mensajeClave, "La contraseña debe ser mayor a 8 caracteres")
     }
 
+}
+
+function cambiarVisual(condicion, icono, input, mens, textMensaje){
+    mens.textContent = textMensaje
+    console.log(icono)
+    if(mens.classList.value == 'oculto'){
+        mens.classList.remove('oculto')
+    } 
+    if(condicion)
+    {
+        input.classList.remove("advertencia")
+        mens.classList.remove("Invalido")
+        mens.classList.add("valido")
+        icono.classList.add('cumpleIMG')
+        icono.classList.remove('NOcumpleIMG')
+    }
+    else{
+        input.classList.add('advertencia')
+        mens.classList.remove('valido')
+        mens.classList.add('Invalido')
+        icono.classList.add('NOcumpleIMG')
+        icono.classList.remove('cumpleIMG')
+    }
 }
 
 claveInput.addEventListener('keyup', (e) => validarClave())

@@ -40,10 +40,11 @@ input{
 
 .NOcumpleIMG{
     width: 100px;
-    object-position: -51px -13px;
+    object-position: -53px -13px;
 }
 
 
 .titulo{
     display: flex;
+    align-items: center;
 }
