@@ -7,6 +7,8 @@ let claveValida = false;
 let correoValido = false;
 const mensajeClave = document.querySelector('#MensajeClave')
 const iconosValidacion = document.getElementsByClassName('iconoIMG')
+const formulario = document.querySelector("#formulario-turno")
+
 
 function validarCorrreo() {
     const CorreoLimpio = correoInput.value.trim()
@@ -26,8 +28,6 @@ function validarCorrreo() {
         correoValido = false
         cambiarVisual(correoValido, iconosValidacion[0], correoInput, mensajeCorreo,'Error, no pusite la cantidad nesesaria')
     }
-
-    return condicion
 }
 
 function validarClave(){
@@ -50,7 +50,6 @@ function validarClave(){
 
 function cambiarVisual(condicion, icono, input, mens, textMensaje){
     mens.textContent = textMensaje
-    console.log(icono)
     if(mens.classList.value == 'oculto'){
         mens.classList.remove('oculto')
     } 
@@ -75,15 +74,20 @@ claveInput.addEventListener('keyup', (e) => validarClave())
 correoInput.addEventListener('keyup', (e) => validarCorrreo())
 
 
-function validarFormulario(){
-    const nombreValido = validarNombre
-    
+function validarFormulario(evento){
+    validarCorrreo()
+    validarClave()
 
-    if(nombreValido && claveValida){
+    if(correoValido && claveValida){
         mensaje.textContent = "Formulario ingresado Correctamente"
+        mensaje.classList.toggle("Invalido")
+        evento.preventDefault()
     }
     else{
         mensaje.textContent = "Los datos ingresados son erroneos o no cumplen las condiciones, vuelva a intentarlo"
         mensaje.classList.toggle("Invalido")
+        evento.preventDefault()
     }
 }
+
+formulario.addEventListener("submit", (e) => validarFormulario(e));
