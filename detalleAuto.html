@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,86 +18,52 @@
         <div class="contenedor cabecera-contenido">
 
             <a class="marca" href="inicio.html">
-                autos copados
+                autos copados   
             </a>
 
             <nav>
                 <ul class="menu">
-
-                    <li>
-                        <a href="inicio.html">Inicio</a>
-                    </li>
-
-                    <li>
-                        <a href="login.html">LOG IN</a>
-                    </li>
-
-                    <li>
-                        <a href="registro.html">Registrarse</a>
-                    </li>
-
+                    <li><a href="inicio.html">Inicio</a></li>
+                    <li><a href="login.html">LOG IN</a></li>
+                    <li><a href="registro.html">Registrarse</a></li>
                 </ul>
             </nav>
 
         </div>
     </header>
 
-
     <main class="DetalleAuto">
 
         <section class="detalle-auto">
 
-            <img
-                id="imagenAuto"
-                src=""
-                alt="Imagen del auto"
-            >
+            <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
 
             <div class="detalle-info">
 
-                <h1 id="nombreAuto"></h1>
+                <h1>Toyota Corolla Cross</h1>
 
-                <h2 id="precioAuto"></h2>
+                <h2>$42.212.000</h2>
 
-                <p>
-                    <strong>Marca:</strong>
-                    <span id="marcaAuto"></span>
-                </p>
+                <p><strong>Marca:</strong> Toyota</p>
 
-                <p>
-                    <strong>Modelo:</strong>
-                    <span id="modeloAuto"></span>
-                </p>
+                <p><strong>Modelo:</strong> Corolla Cross</p>
 
-                <p>
-                    <strong>Año:</strong>
-                    <span id="anioAuto"></span>
-                </p>
+                <p><strong>Año:</strong> 2023</p>
 
-                <p>
-                    <strong>Kilómetros:</strong>
-                    <span id="kilometrosAuto"></span>
-                </p>
+                <p><strong>Kilómetros:</strong> 25.000 km</p>
 
-                <p>
-                    <strong>Combustible:</strong>
-                    <span id="combustibleAuto"></span>
-                </p>
+                <p><strong>Combustible:</strong> Nafta</p>
 
-                <p>
-                    <strong>Transmisión:</strong>
-                    <span id="transmisionAuto"></span>
-                </p>
+                <p><strong>Transmisión:</strong> Automática</p>
 
-                <p>
-                    <strong>Vendedor:</strong>
-                    <span id="vendedorAuto"></span>
-                </p>
+                <p><strong>Vendedor:</strong> Alonsodsas</p>
 
 
-                
+                <div id="opcionesComprador">
 
-                <div id="opcionesComprador" class="oculto">
+                    <button class="boton" id="botonOfertar">
+                        Ofertar
+                    </button>
 
                     <a class="boton" href="#">
                         Comprar Ahora
@@ -109,36 +76,30 @@
                 </div>
 
 
-                
+                <div id="formularioOferta" class="oculto">
 
-                <div id="opcionesVendedor" class="oculto">
+                    <h3>Realizar una oferta</h3>
 
-                    <button class="boton">
-                        Modificar
-                    </button>
+                    <form id="oferta">
 
-                    <button class="boton">
-                        Eliminar
-                    </button>
+                        <label for="montoOferta">
+                            ¿Cuánto dinero querés ofrecer?
+                        </label>
 
-                </div>
+                        <input
+                            type="number"
+                            id="montoOferta"
+                            min="1"
+                            required
+                        >
 
+                        <button class="boton" type="submit">
+                            Enviar oferta
+                        </button>
 
-            
+                    </form>
 
-                <div id="opcionesAdministrador" class="oculto">
-
-                    <button class="boton">
-                        Modificar publicación
-                    </button>
-
-                    <button class="boton">
-                        Eliminar publicación
-                    </button>
-
-                    <button class="boton">
-                        Dar de baja
-                    </button>
+                    <p id="mensajeOferta"></p>
 
                 </div>
 
@@ -168,17 +129,13 @@
 
                     </div>
 
-                    <button
-                        id="boton-guardar"
-                        class="boton"
-                        type="submit"
-                    >
+                    <button class="boton" type="submit">
                         Enviar
                     </button>
 
                 </form>
 
-                <a class="boton">
+                <a class="boton" href="#listaComentarios">
                     Ver Preguntas
                 </a>
 
@@ -191,7 +148,42 @@
 
                     <h2>Comentarios</h2>
 
-                    <div id="listaComentarios"></div>
+                    <div id="listaComentarios">
+
+                        <div class="comentario">
+
+                            <div class="NombreUsuarioComentador">
+
+                                <img src="./img/usuario.png" alt="Usuario">
+
+                                <h3>Guerrero Ramirez</h3>
+
+                                <p>19/03/2025</p>
+
+                            </div>
+
+                            <p>¿Qué motor tiene?</p>
+
+                        </div>
+
+
+                        <div class="comentario">
+
+                            <div class="NombreUsuarioComentador">
+
+                                <img src="./img/usuario.png" alt="Usuario">
+
+                                <h3>Santiago Dorrego</h3>
+
+                                <p>20/03/2025</p>
+
+                            </div>
+
+                            <p>¿Puedo comprarlo en cuotas?</p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -203,15 +195,12 @@
 
 
     <footer class="pie">
+
         <div class="contenedor">
-
-            <p>
-                autos copados - Proyecto PWM
-            </p>
-
+            <p>autos copados - Proyecto PWM</p>
         </div>
-    </footer>
 
+    </footer>
 
     <script src="./js/detalleAuto.js"></script>
 

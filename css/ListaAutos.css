@@ -257,3 +257,42 @@
         grid-template-columns: auto 1fr;
     }
 }
+
+
+
+
+
+
+
+#OfertasRecibidas {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+
+
+
+#detalleOferta {
+    margin-top: 15px;
+}
+
+#detalleOferta p {
+    margin-bottom: 10px;
+}
+
+
+
+
+#botonesOferta {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+
+
+#botonesOferta.oculto {
+    display: none;
+}
