@@ -15,3 +15,5 @@ selectImg.addEventListener('change', (evento) =>
         const a = evento.target.files[0]   
         actualizarIMG(a)
     })
+
+    

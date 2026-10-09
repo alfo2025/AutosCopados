@@ -3,8 +3,6 @@ const correoInput = document.querySelector("#correo-usuario")
 const mensaje = document.querySelector("#MensajeAprobacion")
 const mensajeCorreo = document.querySelector("#MensajeCorreo")
 const claveInput =document.querySelector("#clave-usuario")
-let claveValida = false;
-let correoValido = false;
 const mensajeClave = document.querySelector('#MensajeClave')
 const iconosValidacion = document.getElementsByClassName('iconoIMG')
 const formulario = document.querySelector("#formulario-turno")
@@ -12,7 +10,7 @@ const formulario = document.querySelector("#formulario-turno")
 
 function validarCorrreo() {
     const CorreoLimpio = correoInput.value.trim()
-
+    correoValido= false;
     if(CorreoLimpio.length >= 3)
         if(PatronCorreo.test(CorreoLimpio)){
             correoValido = true
@@ -28,11 +26,13 @@ function validarCorrreo() {
         correoValido = false
         cambiarVisual(correoValido, iconosValidacion[0], correoInput, mensajeCorreo,'Error, no pusite la cantidad nesesaria')
     }
+    return  correoValido
 }
 
 function validarClave(){
     const claveLimpio = claveInput.value.trim()
-    
+    claveValida = false
+
     if(mensajeClave.classList.value == 'oculto'){
         mensajeClave.classList.remove("oculto")
     }
@@ -45,7 +45,7 @@ function validarClave(){
         claveValida = false
         cambiarVisual(claveValida, iconosValidacion[1], claveInput, mensajeClave, "La contraseña debe ser mayor a 8 caracteres")
     }
-
+    return claveValida
 }
 
 function cambiarVisual(condicion, icono, input, mens, textMensaje){
@@ -70,15 +70,15 @@ function cambiarVisual(condicion, icono, input, mens, textMensaje){
     }
 }
 
-claveInput.addEventListener('keyup', (e) => validarClave())
-correoInput.addEventListener('keyup', (e) => validarCorrreo())
+claveInput.addEventListener('keyup', validarClave)
+correoInput.addEventListener('keyup', validarCorrreo)
 
 
 function validarFormulario(evento){
-    validarCorrreo()
-    validarClave()
+    const VCo = validarCorrreo()
+    const VCl = validarClave()
 
-    if(correoValido && claveValida){
+    if(VCo && VCl){
         mensaje.textContent = "Formulario ingresado Correctamente"
         mensaje.classList.toggle("Invalido")
         evento.preventDefault()
