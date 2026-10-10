@@ -22,44 +22,47 @@
         </div>
     </header>
 
-    <main class="contenedor">
-        <section class="introduccion" aria-labelledby="titulo-principal">
-            <h1 id="titulo-principal">Bienvenido a autos copados</h1>
-            <p>ingresa tus datos para logearte!</p>
-        </section>
-
-       <section>
-         <form id="formulario-turno" class="formulario" action="#" method="post">
-            <div class="campo campo-ancho">
-                <div class="titulo">
-                    <label for="correo-usuario">correo de usuario</label>
-                    <div class="icono">
-                        <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+    <main class="formulario login">
+        <div id="ImagenLogin">
+            <img src="./img/Anuncio/anuncio.jpg" alt="">
+        </div>
+        <div id="DatosLogin">
+            <section class="introduccion" aria-labelledby="titulo-principal">
+                <h1 id="titulo-principal">Bienvenido a autos copados</h1>
+                <p>Ingresa tus datos para logearte!</p>
+            </section>
+    
+           <section>
+             <form id="formulario-turno" action="#" method="post">
+                <div class="campo campo-ancho">
+                    <div class="titulo">
+                        <label for="correo-usuario">Correo de usuario</label>
+                        <div class="icono">
+                            <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                        </div>
                     </div>
+                    <input id="correo-usuario" name="correo-usuario" type="text" class="">
+                    <p id="MensajeCorreo" class="oculto">Respuesta referida al correo</p>
                 </div>
-                <input id="correo-usuario" name="correo-usuario" type="text" class="">
-                <p id="MensajeCorreo" class="oculto">Respuesta referida al correo</p>
-            </div>
-            <div class="campo campo-ancho">
-                <div class="titulo">
-                    <label for="clave-usuario">clave</label>
-                    <div class="icono">
-                        <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                <div class="campo campo-ancho">
+                    <div class="titulo">
+                        <label for="clave-usuario">Clave</label>
+                        <div class="icono">
+                            <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                        </div>
                     </div>
+                    <input id="clave-usuario" name="clave-usuario" type="password" class="">
+                    <p id="MensajeClave" class="oculto">mensaje clave</p>
                 </div>
-                <input id="clave-usuario" name="clave-usuario" type="password" class="">
-                <p id="MensajeClave" class="oculto">mensaje clave</p>
-            </div>
-            <p id="MensajeAprobacion" class="">Ingrese los datos para ingesar a la secion</p>
-            <div class="acciones-formulario">
-                <button id="boton-guardar" class="boton" type="submit">Ingresar</button>
-                <button id="boton-limpiar" class="boton boton-secundario" type="reset">Limpiar</button>
-            </div>
-        </form>
-       </section>
+                <p id="MensajeAprobacion" class="">Ingrese los datos para ingesar a la secion</p>
+                <div class="acciones-formulario">
+                    <button id="boton-guardar" class="boton" type="submit">Ingresar</button>
+                    <button id="boton-limpiar" class="boton boton-secundario" type="reset">Limpiar</button>
+                </div>
+            </form>
+           </section>
+        </div>
     </main>
-
-    <footer class="pie"><div class="contenedor"><p>autos copados - Proyecto PWM</p></div></footer>
     <script src="./js/login.js"></script>
 </body>
 </html>

@@ -36,11 +36,6 @@ a {
    max-width: 850px;
 }
 
-main {
-   min-height: calc(100vh - 170px);
-   padding-bottom: 40px;
-   padding-top: 40px;
-}
 
 .cabecera {
    background: #0b6670;
@@ -200,14 +195,6 @@ th {
 }
 
 
-.formulario {
-   background: #fff;
-   border: 1px solid #d8e1e3;
-   display: grid;
-   gap: 18px;
-   grid-template-columns: repeat(2, 1fr);
-   padding: 24px;
-}
 
 .campo {
    display: flex;
@@ -269,50 +256,3 @@ textarea {
    margin: 0;
 }
 
-@media (max-width: 768px) {
-
-   .cabecera-contenido,
-   .encabezado-pagina,
-   .encabezado-seccion {
-      align-items: flex-start;
-      flex-direction: column;
-   }
-
-   .cabecera-contenido {
-      padding-bottom: 12px;
-      padding-top: 12px;
-   }
-
-   .menu {
-      flex-direction: column;
-      gap: 2px;
-      width: 100%;
-   }
-
-   .menu a {
-      padding: 8px 10px;
-   }
-
-   .tarjetas {
-      grid-template-columns: 1fr;
-   }
-
-   .formulario {
-      grid-template-columns: 1fr;
-      padding: 18px;
-   }
-
-   .campo-ancho,
-   .acciones-formulario {
-      grid-column: auto;
-   }
-
-   .acciones-formulario {
-      flex-direction: column;
-   }
-
-   .acciones-formulario .boton {
-      text-align: center;
-      width: 100%;
-   }
-}
