@@ -50,7 +50,7 @@ input{
     align-items: center;
 }
 
-#ImagenLogin{
+.ImagenPublicidad{
     display: none;
 }
 
@@ -67,7 +67,29 @@ body{
     border-radius: 20px;
 }
 
-#ImagenLogin img{
+#DatosRegistro{
+    display: block;
+    margin: 5% 4%;
+    background-color: rgb(255, 255, 255);
+    height: 80vh;
+    padding: 3% 2%;
+    object-fit: cover;
+    overflow: scroll;
+    border-radius: 20px;
+}
+
+#DatosRegistro::-webkit-scrollbar{
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 10px;
+}
+#DatosRegistro::-webkit-scrollbar-thumb{
+  background: #33ba80;
+  border-radius: 20px;
+}
+
+
+.ImagenPublicidad img{
     height: 100%;
     width: 1001px;
 }
@@ -92,11 +114,18 @@ body{
         font-size: 2vh;
         padding: 3% 2%;
     }
-    #ImagenLogin{
+    .ImagenPublicidad{
         width: 50%;
         height: 100%;
         display: flex;
         object-fit: cover;
         overflow: hidden;
+    }
+
+    #DatosRegistro{
+        width: 45%;
+        margin: 2% 2.5%;
+        font-size: 2vh;
+        height: 87vh;
     }
 }
