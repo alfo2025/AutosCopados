@@ -43,7 +43,7 @@ function validarClave(){
     }
     else{
         claveValida = false
-        cambiarVisual(claveValida, iconosValidacion[1], claveInput, mensajeClave, "La contraseña debe ser mayor a 8 caracteres")
+        cambiarVisual(claveValida, iconosValidacion[1], claveInput, mensajeClave, "La contraseña debe ser mayor a 8 caracteres, le faltan "+(8-claveLimpio.length))
     }
     return claveValida
 }
@@ -80,12 +80,14 @@ function validarFormulario(evento){
 
     if(VCo && VCl){
         mensaje.textContent = "Formulario ingresado Correctamente"
-        mensaje.classList.toggle("Invalido")
+        mensaje.classList.remove("Invalido")
+        mensaje.classList.add("valido")
         evento.preventDefault()
     }
     else{
         mensaje.textContent = "Los datos ingresados son erroneos o no cumplen las condiciones, vuelva a intentarlo"
-        mensaje.classList.toggle("Invalido")
+        mensaje.classList.add("Invalido")
+        mensaje.classList.remove("valido")
         evento.preventDefault()
     }
 }
