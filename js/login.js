@@ -5,8 +5,8 @@ const mensajeCorreo = document.querySelector("#MensajeCorreo")
 const claveInput =document.querySelector("#clave-usuario")
 const mensajeClave = document.querySelector('#MensajeClave')
 const iconosValidacion = document.getElementsByClassName('iconoIMG')
-const formulario = document.querySelector("#formulario-turno")
-
+const formulario = document.querySelector("#formulario-login")
+const imgLogin = document.querySelector("#IMGLogin")
 
 function validarCorrreo() {
     const CorreoLimpio = correoInput.value.trim()
@@ -40,6 +40,7 @@ function validarClave(){
     if(claveLimpio.length >= 8){
         claveValida = true
         cambiarVisual(claveValida, iconosValidacion[1], claveInput, mensajeClave, "clave valida")
+        
     }
     else{
         claveValida = false
@@ -83,12 +84,14 @@ function validarFormulario(evento){
         mensaje.classList.remove("Invalido")
         mensaje.classList.add("valido")
         evento.preventDefault()
+        imgLogin.src = "./img/Anuncio/anuncio2.jpg"
     }
     else{
         mensaje.textContent = "Los datos ingresados son erroneos o no cumplen las condiciones, vuelva a intentarlo"
         mensaje.classList.add("Invalido")
         mensaje.classList.remove("valido")
         evento.preventDefault()
+        imgLogin.src = "./img/sospechoso.jpg"
     }
 }
 
