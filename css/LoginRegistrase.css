@@ -88,10 +88,24 @@ body{
   border-radius: 20px;
 }
 
+#claves{
+    display: flex;
+}
+
 
 .ImagenPublicidad img{
     height: 100%;
     width: 1001px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
 
 @media (min-width: 768px){

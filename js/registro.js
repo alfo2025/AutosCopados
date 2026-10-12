@@ -10,8 +10,17 @@ const claveMensaje = document.querySelector('#MensajeClave')
 const completarClave = document.querySelector('#CompletarClave')
 const claveConfirmarInput = document.querySelector('#claveConfirmar')
 const claveConfirmarMensaje = document.querySelector('#MensajeClaveConfirmacion')
-
+const fechaInput = document.querySelector('#fecha')
+const fechaMensaje = document.querySelector('#MensajeFecha')
+const dniNumeroInput = document.querySelector('#DNI')
+const dniMensaje = document.querySelector('#MensajeDni')
+const dniFotosInput = document.getElementsByClassName('FotoDNI')
+const dniFotosMensaje = document.getElementsByClassName('FotosDNIMensaje')
 const iconosValidacion = document.getElementsByClassName('iconoIMG')
+const formulario = document.querySelector('#formulario-registro')
+const imgRegistro = document.querySelector('#imgRegistro')
+const mensaje = document.querySelector('#MensajeAprobacion')
+
 
 function cambiarVisual(condicion, icono, input, mens, textMensaje){
     mens.textContent = textMensaje
@@ -34,6 +43,8 @@ function cambiarVisual(condicion, icono, input, mens, textMensaje){
         icono.classList.remove('cumpleIMG')
     }
 }
+
+
 
 function validarNombre(){
     const nombreLimpio = nombreInput.value.trim()
@@ -102,6 +113,7 @@ function validarClave(){
 }
 
 function validacionClaveCompleta(){
+    if(claveInput.value.trim().length > 0)
     CompletarClave.classList.remove('oculto')
     claveCompletaValida = false
     if(claveConfirmarInput.value == claveInput.value)
@@ -116,8 +128,125 @@ function validacionClaveCompleta(){
     return claveCompletaValida
 }
 
+function validarFecha(){
+    fechaSeleccionada = new Date(fechaInput.value)
+    fechaActual = new Date()
+    Años = fechaActual.getFullYear() - fechaSeleccionada.getFullYear()
+    fechaValida = false
+
+    if(fechaActual.getMonth() < fechaSeleccionada.getMonth())
+    {
+        Años = Años - 1
+    }else{
+        if(fechaActual.getMonth() == fechaSeleccionada.getMonth() &&  fechaActual.getDate() < fechaSeleccionada.getDate()){
+            Años = Años -1
+        }
+    }
+    
+    if(Años < 18){
+        fechaValida = false
+        cambiarVisual(fechaValida,iconosValidacion[5],fechaInput,fechaMensaje,"Eres menor de edad, no puedes registrarte")
+    }
+    else
+    {
+        if(Años > 75)
+        {
+            fechaValida = false
+            cambiarVisual(fechaValida,iconosValidacion[5],fechaInput,fechaMensaje,"No te pases pe, seras viejo, pero no jurasico >:c")
+        }
+        else
+        {
+            fechaValida = true
+            cambiarVisual(fechaValida,iconosValidacion[5],fechaInput,fechaMensaje,"Cumples la edad necesaria")
+        }
+    }
+    return fechaValida
+}
+
+function ValidarNumeroDNI(){
+    dniValido = false
+    if(dniNumeroInput.value >= 10000000 && dniNumeroInput.value <= 99999999)
+    {
+        dniValido = true
+        cambiarVisual(dniValido, iconosValidacion[6],dniNumeroInput,dniMensaje,"DNI validado")
+    }
+    else{
+        cambiarVisual(dniValido, iconosValidacion[6],dniNumeroInput,dniMensaje,"DNI Inservible")
+    }
+
+    if(dniValido){
+        document.querySelector('#FotosDNI').classList.remove('oculto')
+
+    }
+    ValidarFotosDni()
+    return dniValido
+}
+
+function ValidarFotosDni(){
+    fotosValidas = false
+    f1 = false
+    f2 = false
+
+    if(dniFotosInput[0].files.length > 0)
+    {
+        f1 = true
+        cambiarVisual(f1,iconosValidacion[7],dniFotosInput[0],dniFotosMensaje[0],'DNI FRENTE COMPLETA')
+    }else
+    { 
+        cambiarVisual(f1,iconosValidacion[7],dniFotosInput[0],dniFotosMensaje[0],'DNI FRENTE INCOMPLETA')
+    }
+
+    if(dniFotosInput[1].files.length > 0)
+    {
+        f2 = true
+        cambiarVisual(f2,iconosValidacion[8],dniFotosInput[1],dniFotosMensaje[1],'DNI REVERSA COMPLETA')
+    }else
+    { 
+        cambiarVisual(f2,iconosValidacion[8],dniFotosInput[1],dniFotosMensaje[1],'DNI REVERSA INCOMPLETA')
+    }
+
+    if(f1 && f2)
+        fotosValidas = true
+
+    return fotosValidas
+}
+
 nombreInput.addEventListener('keyup', validarNombre)
 apellidoInput.addEventListener('keyup', validarApellido)
 correoInput.addEventListener('keyup', validarCorrreo)
 claveInput.addEventListener('keyup', validarClave)
 claveConfirmarInput.addEventListener('keyup', validacionClaveCompleta)
+fechaInput.addEventListener('change', validarFecha)
+dniNumeroInput.addEventListener('keyup', ValidarNumeroDNI)
+dniFotosInput[0].addEventListener('change', ValidarFotosDni)
+dniFotosInput[1].addEventListener('change', ValidarFotosDni)
+fechaInput.value = new Date().toLocaleDateString('en-CA')
+
+function validarFormulario(evento){
+    
+    nombre = validarNombre()
+    apellido = validarApellido()
+    correo = validarCorrreo()
+    clave = validarClave()
+    claveC = validacionClaveCompleta()
+    fecha = validarFecha()
+    dni = ValidarNumeroDNI()
+    fotos = ValidarFotosDni()
+
+    if(nombre && apellido && correo && clave && claveC && fecha && dni && fotos){
+        mensaje.textContent = "Formulario ingresado Correctamente"
+        mensaje.classList.remove("Invalido")
+        mensaje.classList.add("valido")
+        evento.preventDefault()
+        imgRegistro.src = "./img/Anuncio/anuncio3.webp"
+    }
+    else{
+        mensaje.textContent = "Los datos ingresados son erroneos o no cumplen las condiciones, vuelva a intentarlo"
+        mensaje.classList.add("Invalido")
+        mensaje.classList.remove("valido")
+        evento.preventDefault()
+        imgRegistro.src = "./img/sospechoso.jpg"
+    }
+}
+
+formulario.addEventListener("submit", (e) => validarFormulario(e));
