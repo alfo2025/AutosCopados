@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autos Copados | Registro</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="./css/LoginRegistrase.css">
 </head>
 
 <body>
@@ -23,35 +24,136 @@
             </nav>
         </div>
     </header>
-    <main class="contenedor contenido-angosto">
-        <h1>Registrar nuevo usuario</h1>
-        <p>Completá con tus datos</p>
-        <form id="formulario-turno" class="formulario" action="#" method="post">
-            
-            <div class="campo"><label for="nombre">Nombre</label><input id="nombre"
-                    name="nombre" type="text" required></div>
-            <div class="campo"><label for="apellido">Apellido</label><input id="apellido"
-                    name="apellido" type="text" required></div>
-            
-            <div class="campo campo-ancho">
-                <label for="correo">Correo electrónico</label>
-                <input id="correo" name="correo" type="email" required>
-            </div>
-            <div class="campo"><label for="clave">Clave</label><input id="clave"
-                    name="clave" type="text" required></div>
-            <div class="campo"><label for="fecha">Fecha de nacimiento</label><input id="fecha" name="fecha" type="date" required>
-            </div>
-            
-            
-            <div class="acciones-formulario"><button id="boton-guardar" class="boton" type="submit">Registrarse</button><button id="boton-limpiar" class="boton boton-secundario"
-                    type="reset">Limpiar</button></div>
-        </form>
-    </main>
-    <footer class="pie">
-        <div class="contenedor">
-            <p>Autos Copados · Proyecto integrador de referencia PWM</p>
+    <main class="formulario Registro">
+        <div class="ImagenPublicidad">
+            <img src="./img/Anuncio/anuncio3.webp" id="imgRegistro" alt="">
         </div>
-    </footer>
+        <div id="DatosRegistro">
+            <section>
+                <h1>Registrarse</h1>
+                <p>Completá con tus datos</p>
+            </section>
+
+            <section>
+                <form id="formulario-registro" class="" action="#" method="post">
+                    
+                    <div class="">
+                        <div class="titulo">
+                            <label for="correo-usuario">Nombre:</label>
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                        </div>
+                        <input id="nombre" name="nombre" type="text" >
+                        <p id="MensajeNombre" class="oculto">mensaje</p>
+                    </div>
+                    
+                    <div class="">
+                        <div class="titulo">
+                            <label for="correo-usuario">Apellido:</label>
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                        </div>
+                        <input id="apellido" name="apellido" type="text" >
+                        <p id="MensajeApellido" class="oculto">mensaje</p>
+                    </div>
+    
+                    <div class="">
+                        <div class="titulo">
+                            <label for="correo-usuario">Correo de usuario</label>
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                        </div>
+                        <input id="correo" name="correo" type="email" >
+                        <p id="MensajeCorreo" class="oculto">mensaje</p>
+                    </div>
+                    
+                    <div id="claves">
+                        <div class="">
+                            <div class="titulo">
+                                <label for="correo-usuario">Clave:</label>
+                                <div class="icono">
+                                    <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                                </div>
+                            </div>
+                            <input id="clave" name="clave" type="password">
+                            <p id="MensajeClave" class="oculto">mensaje</p>
+                        </div>
+        
+                        <div id="CompletarClave" class="oculto">
+                            <div class="titulo">
+                                <label for="correo-usuario">Confirmar clave:</label>
+                                <div class="icono">
+                                    <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                                </div>
+                            </div>
+                            <input id="claveConfirmar" name="clave" type="password">
+                            <p id="MensajeClaveConfirmacion" class="oculto">mensaje</p>
+                        </div>
+                    </div>
+    
+                    <div class="">
+                        <div class="titulo">
+                            <label for="Fecha-Nacimiento">Fecha de Nacimiento:</label>
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                        </div>
+                        <input id="fecha" name="fecha" type="date">
+                        <p id="MensajeFecha" class="oculto">mensaje</p>
+                    </div>
+                    
+                    <div class="">
+                        <div class="titulo">
+                            <label for="Dni-Numero">Dni:</label>
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                        </div>
+                        <input id="DNI" name="DNI" type="number" >
+                        <p id="MensajeDni" class="oculto">mensaje</p>
+                    </div>
+
+                    <div id="FotosDNI" class="oculto">
+                        <div class="" id="">
+                            <div class="titulo">
+                                <label for="DNI-frotal">Foto del DNI(Frontal):</label>
+                                <div class="icono">
+                                    <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                                </div>
+                            </div>
+                            <input type="file" name="" id="DNIFrontal" class="FotoDNI" accept="image/*">
+                            <img src="" alt="" id="ImagenSeleccionada">
+                            <p class="FotosDNIMensaje oculto">Mensaje</p>
+                        </div>
+    
+                        <div class="" id="">
+                            <div class="titulo">
+                                <label for="DNI-reversa">Foto del DNI(Reversa):</label>
+                                <div class="icono">
+                                    <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                                </div>
+                            </div>
+                            <input type="file" name="" id="DNIReversa" class="FotoDNI" accept="image/*">
+                            <img src="" alt="" id="ImagenSeleccionada" >
+                            <p class="FotosDNIMensaje oculto"> Mensaje</p>
+                        </div>
+                    </div>
+
+
+                    <p id="MensajeAprobacion" class="">Ingrese los datos para Registrarse y formar parte de nuestro sitio</p>
+                    
+                    <div class="acciones-formulario">
+                        <button id="boton-guardar" class="boton" type="submit">Registrarse</button>
+                        <button id="boton-limpiar" class="boton boton-secundario" type="reset">Limpiar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="./js/registro.js"></script>
 </body>
 
 </html>
