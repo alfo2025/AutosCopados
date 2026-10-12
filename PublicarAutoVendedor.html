@@ -22,33 +22,64 @@
         </div>
     </header>
     <main>
-        <h1>Rellene los datos</h1>
-        <section class="caja">
+        <section id="formulario" class="caja">
+            <h1>Rellene los datos</h1>
             <form action="" method="post">
                 <div class="Seccion" id="Imagen">
                     <img src="./img/SeleccionAuto.avif" alt="" id="ImagenSeleccionada">
-                    <input type="file" name="" id="SeleccionarIMG" accept="image/*">
+                    <div>
+                        <div class="titulo">
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                            <label for="SeleccionarIMG">Foto del auto:</label>
+                        </div>
+                        <input type="file" name="" id="SeleccionarIMG" accept="image/*">
+                        <p id="MensajeFoto" class="Mensaje oculto">Respuesta referida al correo</p>
+                    </div>
                 </div>
                 <div id="ConjuntoDatos">
 
                     <div class="Seccion" id="Nombre">
-                        <label for="nombre">Nombre del Auto:</label>
+                        <div class="titulo">
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                            <label for="nombre">Nombre:</label>
+                        </div>
                         <input type="text" id="nombre" name="nombre">
+                        <p id="MensajeNombre" class="oculto">Respuesta referida al correo</p>
                     </div>
     
                     <div class="Seccion">
-                        <label for="año">Año:</label>
-                        <input type="date" name="" id="">
+                        <div class="titulo">
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                            <label for="año">Año:</label>
+                        </div>
+                        <input type="date" name="" id="año">
+                        <p id="añoMensaje" class="oculto">Respuesta a la fecha</p>
                     </div>
                     <div class="Seccion" id="kilometros">
-                        <label for="kilometros">Kilometros: </label>
+                        <div class="titulo">
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                            <label for="kilometros">Kilometros: </label>
+                        </div>
                         <div class="Seccion">
                             <input type="number">
                             <p>km</p>
                         </div>
                     </div>
                     <div class="Seccion">
-                        <label for="marca">Marca: </label>
+                        <div class="titulo">
+                            <div class="icono">
+                                <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
+                            </div>
+                            <label for="marca">Marca: </label>
+                        </div>
                         <select name="marca" id="marca">
                             <option value="" selected disabled hidden>Seleccione una Marca</option>
                             <option value="Toyota">Toyota</option>

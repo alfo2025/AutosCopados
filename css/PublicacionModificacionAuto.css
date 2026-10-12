@@ -3,6 +3,37 @@
     align-items: center;
 }
 
+.titulo{
+    display: flex;
+}
+
+.Invalido{
+    color: red;
+}
+
+.advertencia{
+    background-color: darkred;
+}
+
+.advertencia:hover{
+    background-color: rgb(184, 37, 37);
+    color: antiquewhite;
+}
+
+.oculto{
+    display: none;
+}
+
+
+.valido{
+    color:green
+}
+
+#ImagenSeleccionada{
+    width: 300px;
+}
+
+
 #Imagen{
     display: block;
 }
@@ -11,9 +42,6 @@
     width: 100%;
 }
 
-.Seccion#Imagen img{
-    width: 300px;
-}
 
 .Seccion select{
     width: 200px;
@@ -27,8 +55,12 @@
     width: 100px;
 }
 
-.caja{
-    margin: 0px 50px;
+#nombre{
+    width: 80%;
+}
+
+.Seccion{
+    margin: 10px 0px;
 }
 
 input{
@@ -77,6 +109,35 @@ button{
     border-radius: 20px;
     font-size: 20px;
 }
+
+.titulo .icono{
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin: 0px 10px;
+}
+
+
+.cumpleIMG{
+    width: 100px;
+    object-position: -7px -13px;
+}
+
+#formulario{
+    margin: 25px;
+    height: 100%;
+    background-color:rgb(260, 260, 260);
+    padding: 25px;
+}
+
+.NOcumpleIMG{
+    width: 100px;
+    object-position: -53px -13px;
+}
+
+
+
 
 @media (min-width: 768px) {
     #ConjuntoDatos{
