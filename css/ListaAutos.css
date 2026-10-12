@@ -263,36 +263,47 @@
 
 
 
-
-#OfertasRecibidas {
-    margin: 20px;
+.OfertasRecibidas {
+    margin: 30px 0;
     padding: 20px;
+}
+
+.TituloOfertas {
+    margin-bottom: 20px;
+}
+
+.detalleOferta {
     border: 1px solid #ccc;
     border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
 }
 
+.botonAceptar {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+.botonRechazar {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-
-#detalleOferta {
+.estadoOferta {
+    color: green;
+    font-weight: bold;
     margin-top: 15px;
 }
 
-#detalleOferta p {
-    margin-bottom: 10px;
-}
-
-
-
-
-#botonesOferta {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-
-
-#botonesOferta.oculto {
+.oculto {
     display: none;
 }

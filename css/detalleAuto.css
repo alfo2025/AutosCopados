@@ -117,3 +117,8 @@ form{
     display: none;
 }
 
+.invalido {
+    border: 2px solid red;
+    background-color: red;
+
+}

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,7 +17,7 @@
         <div class="contenedor cabecera-contenido">
 
             <a class="marca" href="inicio.html">
-                autos copados   
+                autos copados
             </a>
 
             <nav>
@@ -35,7 +34,6 @@
     <main class="DetalleAuto">
 
         <section class="detalle-auto">
-
             <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
 
             <div class="detalle-info">
@@ -56,14 +54,14 @@
 
                 <p><strong>Transmisión:</strong> Automática</p>
 
-                <p><strong>Vendedor:</strong> Alonsodsas</p>
+                <p><strong>Vendedor:</strong> SergioRamos</p>
 
 
                 <div id="opcionesComprador">
 
-                    <button class="boton" id="botonOfertar">
+                    <a class="boton" id="id-ofertar" href="#">
                         Ofertar
-                    </button>
+                    </a>
 
                     <a class="boton" href="#">
                         Comprar Ahora
@@ -76,22 +74,28 @@
                 </div>
 
 
-                <div id="formularioOferta" class="oculto">
+
+                <div id="id-formulario-oferta" class="oculto">
 
                     <h3>Realizar una oferta</h3>
 
-                    <form id="oferta">
+                    <form id="id-oferta" novalidate>
 
-                        <label for="montoOferta">
-                            ¿Cuánto dinero querés ofrecer?
-                        </label>
+                        <label for="id-monto-oferta"> ¿Cuánto dinero querés ofrecer? </label>
+                        <input id="id-monto-oferta" name="monto-oferta" type="number">
+                        <small id="id-error-monto"></small>
 
-                        <input
-                            type="number"
-                            id="montoOferta"
-                            min="1"
-                            required
-                        >
+                        <label for="id-cuotas-oferta"> Cantidad de cuotas: </label>
+                        <select id="id-cuotas-oferta" name="cuotas-oferta">
+                            <option value="">Seleccionar cuotas</option>
+                            <option value="1">1 cuota</option>
+                            <option value="3">3 cuotas</option>
+                            <option value="6">6 cuotas</option>
+                            <option value="12">12 cuotas</option>
+                            <option value="18">18 cuotas</option>
+                            <option value="24">24 cuotas</option>
+                        </select>
+                        <small id="id-error-cuotas"></small>
 
                         <button class="boton" type="submit">
                             Enviar oferta
@@ -99,13 +103,22 @@
 
                     </form>
 
-                    <p id="mensajeOferta"></p>
+                    <p id="id-mensaje-oferta"></p>
 
                 </div>
+
 
             </div>
 
         </section>
+
+
+
+
+
+
+
+
 
 
         <div id="PreguntasComentarios">
@@ -120,12 +133,7 @@
                             Pregunta:
                         </label>
 
-                        <input
-                            type="text"
-                            name="PreguntaComprador"
-                            id="PreguntaComprador"
-                            required
-                        >
+                        <input type="text" name="PreguntaComprador" id="PreguntaComprador" required>
 
                     </div>
 

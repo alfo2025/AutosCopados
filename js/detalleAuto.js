@@ -1,14 +1,9 @@
 
-const botonOfertar = document.querySelector("#botonOfertar");
+const botonOfertar = document.querySelector("#id-ofertar");
 
-const formularioOferta = document.querySelector("#formularioOferta");
+const formularioOferta = document.querySelector("#id-formulario-oferta");
 
-const oferta = document.querySelector("#oferta");
-
-const montoOferta = document.querySelector("#montoOferta");
-
-const mensajeOferta = document.querySelector("#mensajeOferta");
-
+botonOfertar.addEventListener("click", mostrarFormulario);
 
 function mostrarFormulario() {
 
@@ -17,19 +12,63 @@ function mostrarFormulario() {
 }
 
 
-function enviarOferta(evento) {
+const formulario = document.querySelector("#id-oferta");
+const montoOferta = document.querySelector("#id-monto-oferta");
+const errorMonto = document.querySelector("#id-error-monto");
+const cuotasOferta = document.querySelector("#id-cuotas-oferta");
+const errorCuotas = document.querySelector("#id-error-cuotas");
+const mensajeOferta = document.querySelector("#id-mensaje-oferta");
 
-    evento.preventDefault();
 
-    const monto = montoOferta.value;
+function validarMonto() {
 
-    localStorage.setItem("ofertaToyota", monto);
-
-    mensajeOferta.textContent = "Tu oferta de $" + monto + " fue enviada";
+    if (Number(montoOferta.value) > 5000000) {
+        montoOferta.classList.remove("invalido");
+        errorMonto.textContent = "";
+        return true;
+    } else {
+        montoOferta.classList.add("invalido");
+        errorMonto.textContent = "La oferta debe superar los $5.000.000";
+        return false;
+    }
 
 }
 
 
-botonOfertar.addEventListener("click", mostrarFormulario);
+function validarCuotas() {
 
-oferta.addEventListener("submit", enviarOferta);
+    if (cuotasOferta.value !== "") {
+        cuotasOferta.classList.remove("invalido");
+        errorCuotas.textContent = "";
+        return true;
+    } else {
+        cuotasOferta.classList.add("invalido");
+        errorCuotas.textContent = "Seleccionar una cantidad de cuotas.";
+        return false;
+    }
+
+}
+
+
+function enviarOferta(evento) {
+
+    evento.preventDefault();
+
+    const montoValido = validarMonto();
+    const cuotasValidas = validarCuotas();
+
+    if (montoValido && cuotasValidas) {
+        mensajeOferta.textContent = "Oferta enviada correctamente.";
+    } else {
+        mensajeOferta.textContent = "Revisar los datos ingresados.";
+    }
+
+}
+
+
+montoOferta.addEventListener("input", validarMonto);
+formulario.addEventListener("submit", enviarOferta);
+
+
+
+
