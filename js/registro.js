@@ -129,19 +129,22 @@ function validacionClaveCompleta(){
 }
 
 function validarFecha(){
+    fechaValida = false
     fechaSeleccionada = new Date(fechaInput.value)
     fechaActual = new Date()
     Años = fechaActual.getFullYear() - fechaSeleccionada.getFullYear()
-    fechaValida = false
 
     if(fechaActual.getMonth() < fechaSeleccionada.getMonth())
     {
         Años = Años - 1
-    }else{
-        if(fechaActual.getMonth() == fechaSeleccionada.getMonth() &&  fechaActual.getDate() < fechaSeleccionada.getDate()){
-            Años = Años -1
+        console.log(Años)
+    }else
+    if(fechaActual.getMonth() == fechaSeleccionada.getMonth()){
+        if(fechaActual.getDate() < fechaSeleccionada.getDate()){
+            Años = Años - 1
         }
     }
+    
     
     if(Años < 18){
         fechaValida = false
@@ -160,6 +163,14 @@ function validarFecha(){
             cambiarVisual(fechaValida,iconosValidacion[5],fechaInput,fechaMensaje,"Cumples la edad necesaria")
         }
     }
+
+    if(isNaN(Años))
+    {
+        fechaValida = false
+        cambiarVisual(fechaValida,iconosValidacion[5],fechaInput,fechaMensaje,"No ingresaste una fecha")
+
+    }
+
     return fechaValida
 }
 
