@@ -79,7 +79,8 @@
 }
 
 .listaMarcas {
-    display: none;
+    display: block;
+    text-align: start;
 }
 
 .Disponible {
@@ -245,11 +246,6 @@
 }
 
 @media (min-width: 1168px) {
-
-    .listaMarcas {
-        display: block;
-        text-align: start;
-    }
 
     .Contenido {
         display: grid;
