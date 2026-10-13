@@ -7,7 +7,12 @@ const nombreMensaje = document.querySelector('#MensajeNombre')
 const fechaInput = document.querySelector('#año')
 const fechaMensaje = document.querySelector('#añoMensaje')
 fechaInput.value = new Date().toLocaleDateString('en-CA')
-
+const kmInput = document.querySelector('#kilometrosI')
+const kmMensaje = document.querySelector('#kmMensaje')
+const marcaInput = document.querySelector('#marca')
+const marcaMensaje = document.querySelector('#MensajeMarca')
+const mensaje = document.querySelector('#MensajeFormulario')
+const formulario = document.querySelector('#formulario-PublicarAuto')
 
 function cambiarVisual(condicion, icono, input, mens, textMensaje){
     mens.textContent = textMensaje
@@ -43,6 +48,10 @@ function actualizarIMG(archivo){
 selectImg.addEventListener('change', (evento) =>  validarFotoAuto(evento))
 nombreInput.addEventListener('keyup', validarNombre)
 fechaInput.addEventListener('change', validarfecha)
+kmInput.addEventListener('keyup', validarKM)
+kmInput.addEventListener('change', validarKM)
+marcaInput.addEventListener('change', validarMarca)
+
 
 function validarFotoAuto(evento){
     fotoValida = false
@@ -108,3 +117,64 @@ function validarfecha(){
     }
     return fechaValida
 }
+
+function validarKM()
+{
+    kmValido = false
+
+    if(kmInput.value >= 10000 && kmInput.value <= 15000){
+        kmValido = true
+        cambiarVisual(kmValido,iconosValidacion[3],kmInput,kmMensaje,'Estandar / Equilibrado')
+    }
+    else
+    if(kmInput.value > 15000 && kmInput.value <= 150000){
+        kmValido = true
+        cambiarVisual(kmValido,iconosValidacion[3],kmInput,kmMensaje,'Pasable')
+    }
+    else
+    if(kmInput.value > 150000 && kmInput.value <= 270000){
+        kmValido = true
+        cambiarVisual(kmValido,iconosValidacion[3],kmInput,kmMensaje,'Limites Criticos')
+    }
+    else{
+        cambiarVisual(kmValido,iconosValidacion[3],kmInput,kmMensaje,'No se permite ese kilometraje')
+    }
+    return kmValido
+}
+
+function validarMarca(){
+    marcaValida = false
+
+    if(marcaInput.value == "ninguno"){
+        cambiarVisual(marcaValida, iconosValidacion[4], marcaInput, marcaMensaje, 'Debes seleccionar una marca')
+    }
+    else{
+        marcaValida = true
+        cambiarVisual(marcaValida, iconosValidacion[4], marcaInput, marcaMensaje, 'Seleccionaste '+marcaInput.value)
+    
+    }
+}
+
+function validarFormulario(evento){
+    foto = validarFotoAuto()
+    nombre = validarNombre()
+    año = validarfecha()
+    km = validarKM()
+    marca = validarMarca()
+
+    if(foto && nombre && año && km && marca){
+        mensaje.textContent = "Formulario ingresado Correctamente"
+        mensaje.classList.remove("Invalido")
+        mensaje.classList.add("valido")
+        evento.preventDefault()
+    }
+    else{
+        mensaje.textContent = "Los datos ingresados son erroneos o no cumplen las condiciones, vuelva a intentarlo"
+        mensaje.classList.add("Invalido")
+        mensaje.classList.remove("valido")
+        evento.preventDefault()
+    }
+}
+
+
+formulario.addEventListener("submit", (e) => validarFormulario(e));

@@ -24,7 +24,7 @@
     <main>
         <section id="formulario" class="caja">
             <h1>Rellene los datos</h1>
-            <form action="" method="post">
+            <form action="" method="post" id="formulario-PublicarAuto">
                 <div class="Seccion" id="Imagen">
                     <img src="./img/SeleccionAuto.avif" alt="" id="ImagenSeleccionada">
                     <div>
@@ -66,11 +66,12 @@
                             <div class="icono">
                                 <img src="./img/bienmal.jpg" alt="" class="iconoIMG">
                             </div>
-                            <label for="kilometros">Kilometros: </label>
+                            <label for="kilometrosI">Kilometros: </label>
                         </div>
                         <div class="Seccion">
-                            <input type="number">
+                            <input type="number" id="kilometrosI">
                             <p>km</p>
+                            <p id="kmMensaje" class="oculto">Respuesta a los km</p>
                         </div>
                     </div>
                     <div class="Seccion">
@@ -81,7 +82,7 @@
                             <label for="marca">Marca: </label>
                         </div>
                         <select name="marca" id="marca">
-                            <option value="" selected disabled hidden>Seleccione una Marca</option>
+                            <option value="ninguno" selected disabled hidden>Seleccione una Marca</option>
                             <option value="Toyota">Toyota</option>
                             <option value="Ford">Ford</option>
                             <option value="MercedesBenz">Mercedes Benz</option>
@@ -90,9 +91,10 @@
                             <option value="Smart">Smart</option>
                             <option value="Audi">Audi</option>
                         </select>
+                        <p id="MensajeMarca" class="oculto">marca</p>
                     </div>
                 </div>
-
+                <p id="MensajeFormulario" ></p>
                 <button type="submit">Publicar</button>
             </form>
         </section>
