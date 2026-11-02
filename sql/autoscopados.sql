@@ -16,9 +16,15 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-CREATE DATABASE `autoscopados`;
+--
+-- Base de datos: `autoscopados`
+--
 
-USE `autoscopados`;
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `comentario`
+--
 
 CREATE TABLE `comentario` (
   `id` int(11) NOT NULL,
@@ -92,6 +98,7 @@ CREATE TABLE `publicacion_auto` (
   `id_marca` int(11) NOT NULL,
   `modelo` varchar(30) NOT NULL,
   `fechaPublicacion` date NOT NULL,
+  `foto` varchar(200) NOT NULL,
   `km` float NOT NULL,
   `combustible` enum('Nafta','Nafta/GNC','Diesel','Hibrido') NOT NULL,
   `precio` float NOT NULL,
