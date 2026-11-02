@@ -18,7 +18,6 @@ function validarCorrreo() {
         }
         else{
             correoValido = false
-            mensajeCorreo.textContent = ""
             cambiarVisual(correoValido, iconosValidacion[0], correoInput, mensajeCorreo,'Error, no escribio bien el correo')
             
         }
