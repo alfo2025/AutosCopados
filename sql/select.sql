@@ -1,5 +1,28 @@
-SELECT nombre as 'Nombre', apellido as 'Apellido', mail as 'Correo'
+--SELECT nombre as 'Nombre', apellido as 'Apellido', mail as 'Correo'
+--FROM usuario;
+-- aca les asignamos alias pero es inncecesario porque ya estan con ese nombre en la tabla
+
+
+SELECT *
 FROM usuario;
+
+
+SELECT nombre,apellido
+FROM usuario;
+
+SELECT *
+FROM usuario
+WHERE nombre='Maria';
+
+SELECT *
+FROM usuario
+WHERE nombre= 'Maria';
+
+
+SELECT *
+FROM usuario
+WHERE nombre LIKE 'Mar%';
+-- aca me va a morstrar las chicas que se llaman maria marcela martina etccc
 
 SELECT *
 FROM usuario
@@ -14,12 +37,23 @@ SELECT *
 FROM usuario
 WHERE nombre LIKE 'H%';
 
+
+
+
+
+
+
 SELECT *
 FROM publicacion_auto;
 
 SELECT *
 FROM publicacion_auto
 ORDER BY fechaPublicacion ASC;
+
+
+SELECT *
+FROM publicacion_auto
+ORDER BY precio ASC;
 
 
 SELECT P.modelo AS 'Modelo', P.fechaPublicacion as 'Fecha de Publicacion', P.km, M.nombre AS 'Marca'
