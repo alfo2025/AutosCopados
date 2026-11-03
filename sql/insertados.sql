@@ -38,7 +38,7 @@ VALUES  (1, 1, 'Corolla XEI', '2026-01-10', 'corolla.jpg', 45000, 'Nafta', 18500
         (3, 5, 'Onix LTZ', '2016-02-20', 'onix.jpg', 51000, 'Nafta', 13900000, 'Suspendido'),
         (4, 6, 'Kicks Exclusive', '2017-03-01', 'kicks.jpg', 19000, 'Nafta', 23500000, 'Disponible'),
         (5, 7, 'Clase A 200', '2011-03-05', 'clase_a.jpg', 30000, 'Nafta', 38500000, 'Oculto');
-
+--- 4 11 23
 INSERT INTO `oferta` (id_pubAuto, id_comprador, monto, fecha_ofertado, estado, cuotas)
 VALUES  (1, 2, 17500000, '2026-04-01', 'Enviada', 12),
         (1, 3, 1450000, '2025-09-01', 'Enviada', 12),
@@ -76,9 +76,9 @@ VALUES  (1, 2, 17500000, '2026-04-01', 'Enviada', 12),
         (10, 3, 36000000, '2026-04-18', 'Enviada', 24);
 
 INSERT INTO `compra` (id_oferta, fecha_compra, id_metodoPago, lugarEntrega)
-VALUES  (2, '2026-04-05', 1, 'Quilmes, Buenos Aires'),
-        (5, '2026-04-09', 3, 'Avellaneda, Buenos Aires'),
-        (9, '2026-04-18', 6, 'La Plata, Buenos Aires');
+VALUES  (4, '2026-04-05', 1, 'Quilmes, Buenos Aires'),
+        (11, '2026-04-09', 3, 'Avellaneda, Buenos Aires'),
+        (23, '2026-04-18', 6, 'La Plata, Buenos Aires');
 
 INSERT INTO `comentario`
 (id_pubAuto, id_usuario, texto, fecha)

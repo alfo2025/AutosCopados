@@ -1,7 +1,7 @@
 --SELECT nombre as 'Nombre', apellido as 'Apellido', mail as 'Correo'
 --FROM usuario;
 -- aca les asignamos alias pero es inncecesario porque ya estan con ese nombre en la tabla
-
+use autoscopados;
 
 SELECT *
 FROM usuario;
@@ -14,9 +14,6 @@ SELECT *
 FROM usuario
 WHERE nombre='Maria';
 
-SELECT *
-FROM usuario
-WHERE nombre= 'Maria';
 
 
 SELECT *
