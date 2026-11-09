@@ -3,50 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>autos copados | log in</title>
+    <title>Autos copados | log in</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/inicio.css">
 </head>
 <body>
     <header class="cabecera">
         <div class="contenedor cabecera-contenido">
-            <a class="marca" href="inicio.html">autos copados</a>
-            <nav aria-label="Navegación principal">
-                <ul class="menu">
-                    <li><a class="activo" href="inicio.html">Inicio</a></li>
-                    <li><a  href="login.html">LOG IN</a></li>
-                    <li><a href="registro.html">Registrarse</a></li>
-                   
-                </ul>
-            </nav>
+            <a class="marca" href="inicio.html">Autos copados</a>
+            <img src="./img/iconos/tresL.png" alt="" id="IconoOP"> 
         </div>
-    </header>
-
-    <section class="Pantalla">
-        <img src="./img/pantallaInicio.jpg" alt="">
-    </section>
-    <main class="contenedor">
-        <h2>Que esperas para tu primera compra!!!</h2>
-        <section class="tarjeta">
-            <h3>Los Mejores Precios en Autos</h3>
-            <p>Encontra las mejores ofertas en Autos ya usados</p>
+        <nav id="Menu" class="Cerrado" >
+            <ul class="menu">
+                <li class="publico"><a class="activo" href="inicio.html">Inicio</a></li>
+                <li class="publico"><a  href="login.html">LOG IN</a></li>
+                <li class="publico"><a href="registro.html">Registrarse</a></li>                
+                <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
+                <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li> 
+                <li class="usuario"><a href="./AprobarOfertas.html">Noctificacion de ofertas</a></li>       
+            </ul>
+        </nav>
+    </header>    
+        
+    <main id="Cuerpo">
+        <section class="Pantalla">
+            <img src="./img/pantallaInicio.jpg" alt="">
         </section>
-        <section class="tarjeta">
-            <h3>Contacto con el Vendedor</h3>
-            <p>Puedes contactarte con el mismo vendedor en caso de tener dudas</p>
-        </section>
-        <section class="tarjeta">
-            <h3>Gestion Automatica</h3>
-            <p>nosotros gestionamos todo a cualquier hora para minimizar cualquier inconveniente que pueda tener</p>
-        </section>
-
-        <div class="botones-rol">
-        <a class="BotonB" href="./ListaAutosComprador.html">Soy comprador</a>
-        <a class="BotonB" href="./ListaAutosVendedor.html">Soy vendedor</a>
-        <a class="BotonB" href="./ListaAutosAdministrador.html">Soy administrador</a>
+        <div class="contenedor">
+            <h2>Que esperas para tu primera compra!!!</h2>
+            <div class="contenedor">
+                <input type="text" name="" id="">
+                <a href="ListaAutosComprador.html">
+                    <button></button>
+                </a>
+            </div>
+            <section class="tarjeta">
+                <h3>Los Mejores Precios en Autos</h3>
+                <p>Encontra las mejores ofertas en Autos ya usados</p>
+            </section>
+            <section class="tarjeta">
+                <h3>Contacto con el Vendedor</h3>
+                <p>Puedes contactarte con el mismo vendedor en caso de tener dudas</p>
+            </section>
+            <section class="tarjeta">
+                <h3>Gestion Automatica</h3>
+                <p>nosotros gestionamos todo a cualquier hora para minimizar cualquier inconveniente que pueda tener</p>
+            </section>
         </div>
     </main>
-
+    <script src="./js/Menu.js"></script>
     <footer class="pie"><div class="contenedor"><p>autos copados - Proyecto PWM</p></div></footer>
 </body>
 </html>

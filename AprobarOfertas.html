@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos copados | Administrar ofertas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/AprobarO.css">
+</head>
+<body>
+    <header class="cabecera">
+            <div class="contenedor cabecera-contenido">
+                <a class="marca" href="inicio.html">Autos copados</a>
+                <img src="./img/iconos/tresL.png" alt="" id="IconoOP"> 
+            </div>
+            <nav id="Menu" class="Cerrado" >
+                <ul class="menu">
+                    <li class="publico"><a class="activo" href="inicio.html">Inicio</a></li>
+                    <li class="publico"><a  href="login.html">LOG IN</a></li>
+                    <li class="publico"><a href="registro.html">Registrarse</a></li>                
+                    <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
+                    <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li> 
+                    <li class="usuario"><a href="./AprobarOfertas.html">Noctificacion de ofertas</a></li>       
+                </ul>
+            </nav>
+    </header>   
+    <main id="Cuerpo">
+
+        <div class="OfertasRecibidas contenedor">
+    
+            <h2 class="TituloOfertas">Ofertas recibidas</h2>
+    
+            <div id="oferta1" class="detalleOferta">
+    
+                <h3>Oferta 1</h3>
+                <p>Auto: Toyota Corolla Cross</p>
+                <p>Oferta: $40.000.000</p>
+                <p>Cantidad de cuotas: 12</p>
+    
+                <button id="aceptar1" class="botonAceptar">Aceptar</button>
+                <button id="rechazar1" class="botonRechazar">Rechazar</button>
+    
+                <p id="estado1" class="estadoOferta"></p>
+    
+            </div>
+    
+            <div id="oferta2" class="detalleOferta">
+    
+                <h3>Oferta 2</h3>
+                <p>Auto: Chevrolet Tracker</p>
+                <p>Oferta: $32.000.000</p>
+                <p>Cantidad de cuotas: 6</p>
+    
+                <button id="aceptar2" class="botonAceptar">Aceptar</button>
+                <button id="rechazar2" class="botonRechazar">Rechazar</button>
+    
+                <p id="estado2" class="estadoOferta"></p>
+    
+            </div>
+    
+            <div id="oferta3" class="detalleOferta">
+    
+                <h3>Oferta 3</h3>
+                <p>Auto: Mercedes Benz Clase C</p>
+                <p>Oferta: $55.000.000</p>
+                <p>Cantidad de cuotas: 18</p>
+    
+                <button id="aceptar3" class="botonAceptar">Aceptar</button>
+                <button id="rechazar3" class="botonRechazar">Rechazar</button>
+    
+                <p id="estado3" class="estadoOferta"></p>
+    
+            </div>
+    
+            <div id="oferta4" class="detalleOferta">
+    
+                <h3>Oferta 4</h3>
+                <p>Auto: Suzuki Jimny</p>
+                <p>Oferta: $30.000.000</p>
+                <p>Cantidad de cuotas: 24</p>
+    
+                <button id="aceptar4" class="botonAceptar">Aceptar</button>
+                <button id="rechazar4" class="botonRechazar">Rechazar</button>
+    
+                <p id="estado4" class="estadoOferta"></p>
+    
+            </div>
+    
+        </div>
+    </main>
+
+<script src="./js/Menu.js"></script>
+</body>
+</html>

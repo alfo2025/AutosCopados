@@ -10,21 +10,23 @@
 </head>
 
 <body>
-
     <header class="cabecera">
         <div class="contenedor cabecera-contenido">
-            <a class="marca" href="inicio.html">autos copados</a>
-            <nav aria-label="Navegación principal">
-                <ul class="menu">
-                    <li><a href="inicio.html">Inicio</a></li>
-                    <li><a href="login.html">LOG IN</a></li>
-                    <li><a class="activo" href="registro.html">Registrarse</a></li>
-
-                </ul>
-            </nav>
+            <a class="marca" href="inicio.html">Autos copados</a>
+            <img src="./img/iconos/tresL.png" alt="" id="IconoOP"> 
         </div>
-    </header>
-    <main class="formulario Registro">
+        <nav id="Menu" class="Cerrado" >
+            <ul class="menu">
+                <li class="publico"><a class="activo" href="inicio.html">Inicio</a></li>
+                <li class="publico"><a  href="login.html">LOG IN</a></li>
+                <li class="publico"><a href="registro.html">Registrarse</a></li>                
+                <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
+                <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li>        
+            </ul>
+        </nav>
+    </header>    
+
+    <main id="Cuerpo" class="formulario Registro">
         <div class="ImagenPublicidad">
             <img src="./img/Anuncio/anuncio3.webp" id="imgRegistro" alt="">
         </div>
@@ -153,6 +155,7 @@
             </section>
         </div>
     </main>
+    <script src="./js/Menu.js"></script>
     <script src="./js/registro.js"></script>
 </body>
 

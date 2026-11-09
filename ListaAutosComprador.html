@@ -14,19 +14,22 @@
 
     <header class="cabecera">
         <div class="contenedor cabecera-contenido">
-            <a class="marca" href="inicio.html">autos copados</a>
-
-            <nav aria-label="Navegación principal">
-                <ul class="menu">
-                    <li><a class="activo" href="inicio.html">Inicio</a></li>
-                    <li><a href="login.html">LOG IN</a></li>
-                    <li><a href="registro.html">Registrarse</a></li>
-                </ul>
-            </nav>
+            <a class="marca" href="inicio.html">Autos copados</a>
+            <img src="./img/iconos/tresL.png" alt="" id="IconoOP"> 
         </div>
-    </header>
+        <nav id="Menu" class="Cerrado" >
+            <ul class="menu">
+                <li class="publico"><a class="activo" href="inicio.html">Inicio</a></li>
+                <li class="publico"><a  href="login.html">LOG IN</a></li>
+                <li class="publico"><a href="registro.html">Registrarse</a></li>                
+                <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
+                <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li> 
+                <li class="usuario"><a href="./AprobarOfertas.html">Noctificacion de ofertas</a></li>       
+            </ul>
+        </nav>
+    </header>   
 
-    <main>
+    <main id="Cuerpo">
 
         <h2>Autos</h2>
 
@@ -190,4 +193,5 @@
     </footer>
 
 </body>
+<script src="./js/Menu.js"></script>
 </html>

@@ -14,19 +14,21 @@
 
     <header class="cabecera">
         <div class="contenedor cabecera-contenido">
-            <a class="marca" href="inicio.html">autos copados</a>
-
-            <nav aria-label="Navegación principal">
-                <ul class="menu">
-                    <li><a class="activo" href="inicio.html">Inicio</a></li>
-                    <li><a href="login.html">LOG IN</a></li>
-                    <li><a href="registro.html">Registrarse</a></li>
-                </ul>
-            </nav>
+            <a class="marca" href="inicio.html">Autos copados</a>
+            <img src="./img/iconos/tresL.png" alt="" id="IconoOP"> 
         </div>
-    </header>
+        <nav id="Menu" class="Cerrado" >
+            <ul class="menu">
+                <li class="publico"><a class="activo" href="inicio.html">Inicio</a></li>
+                <li class="publico"><a  href="login.html">LOG IN</a></li>
+                <li class="publico"><a href="registro.html">Registrarse</a></li>                
+                <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
+                <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li>        
+            </ul>
+        </nav>
+    </header>    
 
-    <main>
+    <main id="Cuerpo">
 
         <div id="PerfilVendedor">
             <img src="./img/usuario.png" alt="Usuario">
@@ -38,278 +40,207 @@
             </div>
         </div>
 
+            <h2>Gestion de publicaciones</h2>
 
+            <div class="Busqueda">
+                <h3>Buscar:</h3>
+                <input type="text">
+            </div>
 
+            <a class="opcionVendedor" href="./PublicarAutoVendedor.html">
+                Publicar auto nuevo
+            </a>
 
+            <div class="Contenido">
 
+                <nav class="Filtro">
 
-<div class="OfertasRecibidas">
+                    <h3>Filtros:</h3>
 
-    <h2 class="TituloOfertas">Ofertas recibidas</h2>
+                    <div class="ConjuntoFiltro">
 
-    <div id="oferta1" class="detalleOferta">
+                        <h3>Marcas</h3>
 
-        <h3>Oferta 1</h3>
-        <p>Auto: Toyota Corolla Cross</p>
-        <p>Oferta: $40.000.000</p>
-        <p>Cantidad de cuotas: 12</p>
+                        <div class="listaMarcas">
 
-        <button id="aceptar1" class="botonAceptar">Aceptar</button>
-        <button id="rechazar1" class="botonRechazar">Rechazar</button>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Ford">
+                                <p>Ford</p>
+                            </div>
 
-        <p id="estado1" class="estadoOferta"></p>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Mercedes Benz">
+                                <p>Mercedes Benz</p>
+                            </div>
 
-    </div>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Hyundai">
+                                <p>Hyundai</p>
+                            </div>
 
-    <div id="oferta2" class="detalleOferta">
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Peugeot">
+                                <p>Peugeot</p>
+                            </div>
 
-        <h3>Oferta 2</h3>
-        <p>Auto: Chevrolet Tracker</p>
-        <p>Oferta: $32.000.000</p>
-        <p>Cantidad de cuotas: 6</p>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Smart">
+                                <p>Smart</p>
+                            </div>
 
-        <button id="aceptar2" class="botonAceptar">Aceptar</button>
-        <button id="rechazar2" class="botonRechazar">Rechazar</button>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Toyota">
+                                <p>Toyota</p>
+                            </div>
 
-        <p id="estado2" class="estadoOferta"></p>
-
-    </div>
-
-    <div id="oferta3" class="detalleOferta">
-
-        <h3>Oferta 3</h3>
-        <p>Auto: Mercedes Benz Clase C</p>
-        <p>Oferta: $55.000.000</p>
-        <p>Cantidad de cuotas: 18</p>
-
-        <button id="aceptar3" class="botonAceptar">Aceptar</button>
-        <button id="rechazar3" class="botonRechazar">Rechazar</button>
-
-        <p id="estado3" class="estadoOferta"></p>
-
-    </div>
-
-    <div id="oferta4" class="detalleOferta">
-
-        <h3>Oferta 4</h3>
-        <p>Auto: Suzuki Jimny</p>
-        <p>Oferta: $30.000.000</p>
-        <p>Cantidad de cuotas: 24</p>
-
-        <button id="aceptar4" class="botonAceptar">Aceptar</button>
-        <button id="rechazar4" class="botonRechazar">Rechazar</button>
-
-        <p id="estado4" class="estadoOferta"></p>
-
-    </div>
-
-</div>
-
-
-
-
-
-        <h2>Gestion de publicaciones</h2>
-
-        <div class="Busqueda">
-            <h3>Buscar:</h3>
-            <input type="text">
-        </div>
-
-        <a class="opcionVendedor" href="./PublicarAutoVendedor.html">
-            Publicar auto nuevo
-        </a>
-
-        <div class="Contenido">
-
-            <nav class="Filtro">
-
-                <h3>Filtros:</h3>
-
-                <div class="ConjuntoFiltro">
-
-                    <h3>Marcas</h3>
-
-                    <div class="listaMarcas">
-
-                        <div class="checkFiltro">
-                            <input type="checkbox" name="Ford">
-                            <p>Ford</p>
-                        </div>
-
-                        <div class="checkFiltro">
-                            <input type="checkbox" name="Mercedes Benz">
-                            <p>Mercedes Benz</p>
-                        </div>
-
-                        <div class="checkFiltro">
-                            <input type="checkbox" name="Hyundai">
-                            <p>Hyundai</p>
-                        </div>
-
-                        <div class="checkFiltro">
-                            <input type="checkbox" name="Peugeot">
-                            <p>Peugeot</p>
-                        </div>
-
-                        <div class="checkFiltro">
-                            <input type="checkbox" name="Smart">
-                            <p>Smart</p>
-                        </div>
-
-                        <div class="checkFiltro">
-                            <input type="checkbox" name="Toyota">
-                            <p>Toyota</p>
-                        </div>
-
-                        <div class="checkFiltro">
-                            <input type="checkbox" name="Audi">
-                            <p>Audi</p>
-                        </div>
-
-                    </div>
-                </div>
-            </nav>
-
-            <section class="ListadoTargAuto">
-
-                <article class="TargAuto Disponible Vendedor">
-
-                    <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
-
-                    <div class="TargAutoInfo">
-                        <h3>Toyota • Corolla Cross</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$42.212.000</strong></p>
-
-                        <div class="accionesVendedor">
-
-                            <a href="detalleAuto.html" class="opcionVendedor verDetalles">
-                                Ver detalles
-                            </a>
-
-                            <button class="opcionVendedor">Modificar</button>
-                            <button class="opcionVendedor EliminarColor">Eliminar</button>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Audi">
+                                <p>Audi</p>
+                            </div>
 
                         </div>
                     </div>
+                </nav>
 
-                </article>
+                <section class="ListadoTargAuto">
 
-                <article class="TargAuto Disponible Vendedor">
+                    <article class="TargAuto Disponible Vendedor">
 
-                    <img src="./img/imagen2.webp" alt="Suzuki Jimny">
+                        <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
 
-                    <div class="TargAutoInfo">
-                        <h3>Suzuki • Jimny</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$33.632.000</strong></p>
+                        <div class="TargAutoInfo">
+                            <h3>Toyota • Corolla Cross</h3>
+                            <p>Precio:</p>
+                            <p class="Precio"><strong>$42.212.000</strong></p>
 
-                        <div class="accionesVendedor">
+                            <div class="accionesVendedor">
 
-                            <a href="detalleAuto.html" class="opcionVendedor verDetalles">
-                                Ver detalles
-                            </a>
+                                <a href="detalleAuto.html" class="opcionVendedor verDetalles">
+                                    Ver detalles
+                                </a>
 
-                            <button class="opcionVendedor">Modificar</button>
-                            <button class="opcionVendedor EliminarColor">Eliminar</button>
+                                <button class="opcionVendedor">Modificar</button>
+                                <button class="opcionVendedor EliminarColor">Eliminar</button>
 
+                            </div>
                         </div>
-                    </div>
 
-                </article>
+                    </article>
 
-                <article class="TargAuto Baja Vendedor">
+                    <article class="TargAuto Disponible Vendedor">
 
-                    <img src="./img/imagen4.webp" alt="Volkswagen Nivus">
+                        <img src="./img/imagen2.webp" alt="Suzuki Jimny">
 
-                    <div class="TargAutoInfo">
-                        <h3>Zero • Nivus</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$31.252.000</strong></p>
-                        <p>Diste de baja</p>
+                        <div class="TargAutoInfo">
+                            <h3>Suzuki • Jimny</h3>
+                            <p>Precio:</p>
+                            <p class="Precio"><strong>$33.632.000</strong></p>
 
-                        <div class="accionesVendedor">
+                            <div class="accionesVendedor">
 
-                            <a href="detalleAuto.html" class="opcionVendedor verDetalles">
-                                Ver detalles
-                            </a>
+                                <a href="detalleAuto.html" class="opcionVendedor verDetalles">
+                                    Ver detalles
+                                </a>
 
-                            <button class="opcionVendedor">Modificar</button>
-                            <button class="opcionVendedor EliminarColor">Eliminar</button>
+                                <button class="opcionVendedor">Modificar</button>
+                                <button class="opcionVendedor EliminarColor">Eliminar</button>
 
+                            </div>
                         </div>
-                    </div>
 
-                </article>
+                    </article>
 
-                <article class="TargAuto Disponible Vendedor">
+                    <article class="TargAuto Baja Vendedor">
 
-                    <img src="./img/imagen4.webp" alt="Mercedes Benz Clase C">
+                        <img src="./img/imagen4.webp" alt="Volkswagen Nivus">
 
-                    <div class="TargAutoInfo">
-                        <h3>Mercedes Benz • Clase C</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$58.900.000</strong></p>
+                        <div class="TargAutoInfo">
+                            <h3>Zero • Nivus</h3>
+                            <p>Precio:</p>
+                            <p class="Precio"><strong>$31.252.000</strong></p>
+                            <p>Diste de baja</p>
 
-                        <div class="accionesVendedor">
+                            <div class="accionesVendedor">
 
-                            <a href="detalleAuto.html" class="opcionVendedor verDetalles">
-                                Ver detalles
-                            </a>
+                                <a href="detalleAuto.html" class="opcionVendedor verDetalles">
+                                    Ver detalles
+                                </a>
 
-                            <button class="opcionVendedor">Modificar</button>
-                            <button class="opcionVendedor EliminarColor">Eliminar</button>
+                                <button class="opcionVendedor">Modificar</button>
+                                <button class="opcionVendedor EliminarColor">Eliminar</button>
 
+                            </div>
                         </div>
-                    </div>
 
-                </article>
+                    </article>
 
-                <article class="TargAuto Disponible Vendedor">
+                    <article class="TargAuto Disponible Vendedor">
 
-                    <img src="./img/imagen2.webp" alt="Chevrolet Tracker">
+                        <img src="./img/imagen4.webp" alt="Mercedes Benz Clase C">
 
-                    <div class="TargAutoInfo">
-                        <h3>Chevrolet • Tracker</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$35.780.000</strong></p>
+                        <div class="TargAutoInfo">
+                            <h3>Mercedes Benz • Clase C</h3>
+                            <p>Precio:</p>
+                            <p class="Precio"><strong>$58.900.000</strong></p>
 
-                        <div class="accionesVendedor">
+                            <div class="accionesVendedor">
 
-                            <a href="detalleAuto.html" class="opcionVendedor verDetalles">
-                                Ver detalles
-                            </a>
+                                <a href="detalleAuto.html" class="opcionVendedor verDetalles">
+                                    Ver detalles
+                                </a>
 
-                            <button class="opcionVendedor">Modificar</button>
-                            <button class="opcionVendedor EliminarColor">Eliminar</button>
+                                <button class="opcionVendedor">Modificar</button>
+                                <button class="opcionVendedor EliminarColor">Eliminar</button>
 
+                            </div>
                         </div>
-                    </div>
 
-                </article>
+                    </article>
 
-                <article class="TargAuto Baja Vendedor">
+                    <article class="TargAuto Disponible Vendedor">
 
-                    <img src="./img/imagen3.webp" alt="Volkswagen Nivus">
+                        <img src="./img/imagen2.webp" alt="Chevrolet Tracker">
 
-                    <div class="TargAutoInfo">
-                        <h3>Volkswagen • Nivus</h3>
-                        <p>Precio:</p>
-                        <p class="Precio"><strong>$29.990.000</strong></p>
-                        <p>Diste de baja</p>
+                        <div class="TargAutoInfo">
+                            <h3>Chevrolet • Tracker</h3>
+                            <p>Precio:</p>
+                            <p class="Precio"><strong>$35.780.000</strong></p>
 
-                        <div class="accionesVendedor">
+                            <div class="accionesVendedor">
 
-                            <a href="detalleAuto.html" class="opcionVendedor verDetalles">
-                                Ver detalles
-                            </a>
+                                <a href="detalleAuto.html" class="opcionVendedor verDetalles">
+                                    Ver detalles
+                                </a>
 
-                            <button class="opcionVendedor">Modificar</button>
-                            <button class="opcionVendedor EliminarColor">Eliminar</button>
+                                <button class="opcionVendedor">Modificar</button>
+                                <button class="opcionVendedor EliminarColor">Eliminar</button>
 
+                            </div>
                         </div>
-                    </div>
+
+                    </article>
+
+                    <article class="TargAuto Baja Vendedor">
+
+                        <img src="./img/imagen3.webp" alt="Volkswagen Nivus">
+
+                        <div class="TargAutoInfo">
+                            <h3>Volkswagen • Nivus</h3>
+                            <p>Precio:</p>
+                            <p class="Precio"><strong>$29.990.000</strong></p>
+                            <p>Diste de baja</p>
+
+                            <div class="accionesVendedor">
+
+                                <a href="detalleAuto.html" class="opcionVendedor verDetalles">
+                                    Ver detalles
+                                </a>
+
+                                <button class="opcionVendedor">Modificar</button>
+                                <button class="opcionVendedor EliminarColor">Eliminar</button>
+
+                            </div>
+                        </div>
 
                 </article>
 
@@ -322,7 +253,7 @@
 
         <h2>Deseas Eliminar este Auto</h2>
 
-        <div id="CartelEliminarOpciones">
+            <div id="CartelEliminarOpciones">
             <button class="opcionSN">Si</button>
             <button class="opcionSN">No</button>
         </div>
@@ -334,6 +265,7 @@
             <p>autos copados - Proyecto PWM</p>
         </div>
     </footer>
-<script src="./js/ofertasVendedor.js"></script>
 </body>
+<script src="./js/Menu.js"></script>
+<script src="./js/ofertasVendedor.js"></script>
 </html>
