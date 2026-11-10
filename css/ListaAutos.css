@@ -4,6 +4,14 @@
     margin: 2% 0;
 }
 
+#BodyVendedor{
+    background-color: #8df2cb;
+}
+
+#BodyComprador{
+    background-color: #5dc6c9;
+}
+
 #PerfilVendedor{
     display: flex;
 }
@@ -64,23 +72,25 @@
 
 .checkFiltro {
     display: flex;
-    width: 100px;
     align-items: center;
+    justify-self:flex-start;
 }
 
 .checkFiltro input {
     height: 20px;
+    margin: 0px 10px;
+    width: 20px;
 }
 
 .ConjuntoFiltro {
     padding: 0 30px;
-    background-color: rgb(246, 255, 240);
+    background-color: rgb(15, 154, 145);
     border-radius: 20px;
+    color: #e6f1f2;
 }
 
 .listaMarcas {
     display: block;
-    text-align: start;
 }
 
 .Disponible {
@@ -90,6 +100,15 @@
 
 .Disponible .TargAutoInfo {
     background-color: #0fb07a;
+}
+
+.Muestra{
+    background-color: #074b5c;
+    color: rgb(156, 235, 253);
+}
+
+.Muestra .TargAutoInfo {
+    background-color: #038096;
 }
 
 .Oculto {
@@ -201,6 +220,7 @@
         width: 290px;
         height: 455px;
         font-size: 100%;
+        margin-top: 40px;
     }
 
     .TargAuto img {

@@ -20,7 +20,7 @@
         </div>
         <nav id="Menu" class="Cerrado" >
             <ul class="menu">
-                <li class="publico"><a class="activo" href="inicio.html">Inicio</a></li>
+                <li class="publico"><a href="inicio.html">Inicio</a></li>
                 <li class="publico"><a  href="login.html">LOG IN</a></li>
                 <li class="publico"><a href="registro.html">Registrarse</a></li>                
                 <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
@@ -33,7 +33,9 @@
     <main id="Cuerpo" class="DetalleAuto">
 
         <section class="detalle-auto">
-            <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
+            <div id="ImagenAuto">
+                <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
+            </div>
 
             <div class="detalle-info">
 
@@ -57,20 +59,18 @@
 
 
                 <div id="opcionesComprador">
-
-                    <a class="boton" id="id-ofertar" href="#">
-                        Ofertar
+                    <a  id="idOfertar" href="">
+                        <button>
+                            Ofertar
+                        </button>
                     </a>
 
-                    <a class="boton" href="#">
-                        Comprar Ahora
+                    <a href="">
+                        <button>
+                            Comprar Ahora
+                        </button>
                     </a>
-
-                    
-
                 </div>
-
-
 
                 <div id="id-formulario-oferta" class="oculto">
 
@@ -108,92 +108,46 @@
             </div>
 
         </section>
-
-
-
-
-
-
-
-
-
-
         <div id="PreguntasComentarios">
-
             <section>
-
-                <form action="#" method="post" id="Pregunta">
-
+                <form action="#" method="post" id="Preguntar">
                     <div>
-
                         <label for="PreguntaComprador">
-                            Pregunta:
+                            Preguntar:
                         </label>
-
                         <input type="text" name="PreguntaComprador" id="PreguntaComprador">
-
                     </div>
-
                     <button class="boton" type="submit">
                         Enviar
                     </button>
-
                 </form>
-
-               
-
             </section>
-
-
             <section>
-
                 <div class="comentarios">
-
                     <h2>Comentarios</h2>
-
                     <div id="listaComentarios">
 
                         <div class="comentario">
-
                             <div class="NombreUsuarioComentador">
-
                                 <img src="./img/usuario.png" alt="Usuario">
-
                                 <h3>Guerrero Ramirez</h3>
-
                                 <p>19/03/2025</p>
-
                             </div>
-
                             <p>¿Qué motor tiene?</p>
-
                         </div>
-
-
                         <div class="comentario">
-
                             <div class="NombreUsuarioComentador">
-
                                 <img src="./img/usuario.png" alt="Usuario">
-
                                 <h3>Santiago Dorrego</h3>
-
                                 <p>20/03/2025</p>
-
                             </div>
-
                             <p>¿Puedo comprarlo en cuotas?</p>
-
                         </div>
 
                     </div>
-
                 </div>
-
             </section>
-
         </div>
-
     </main>
 
 

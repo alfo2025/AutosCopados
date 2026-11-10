@@ -6,13 +6,39 @@
 }
 
 input{
-   height: 35px;
+   height: 38px;
    width: 100%;
+}
+
+.Busqueda{
+   display: flex;
+   object-fit: cover;
+   overflow: hidden;
+   border-radius: 60px;
+   margin: 20px 0px;
+}
+
+.Busqueda input{
+   background-color: rgb(15, 154, 145);;
+   color: #d8e1e3;
+}
+
+.Busqueda *{
+   border-style: none;
 }
 
 .Cerrado{
    display: none;
 }
+
+button{
+   height: 40px;
+   border-style: none;
+   background-color: #174b52;
+   color: #fff;
+   font-size: 100%;
+}
+
 
 .Abierto{
    display: flex;
@@ -82,7 +108,7 @@ a {
 
 .menu a:hover,
 .menu .activo {
-   background: rgba(255, 255, 255, .18);
+   background: rgba(13, 132, 132, 0.993);
 }
 
 
