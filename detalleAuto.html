@@ -30,83 +30,47 @@
         </nav>
     </header>   
 
-    <main id="Cuerpo" class="DetalleAuto">
+    <main id="Cuerpo" >
 
-        <section class="detalle-auto">
+        <section id="DetalleAuto">
             <div id="ImagenAuto">
                 <img src="./img/imagen1.webp" alt="Toyota Corolla Cross">
             </div>
 
-            <div class="detalle-info">
+            <div class="DetalleInfo">
 
                 <h1>Toyota Corolla Cross</h1>
 
                 <h2>$42.212.000</h2>
 
-                <p><strong>Marca:</strong> Toyota</p>
-
-                <p><strong>Modelo:</strong> Corolla Cross</p>
-
-                <p><strong>Año:</strong> 2023</p>
-
-                <p><strong>Kilómetros:</strong> 25.000 km</p>
-
-                <p><strong>Combustible:</strong> Nafta</p>
-
-                <p><strong>Transmisión:</strong> Automática</p>
-
-                <p><strong>Vendedor:</strong> SergioRamos</p>
-
-
+                <div id="DetalleInfoAuto">
+                    <p><strong>Marca:</strong> Toyota</p>
+    
+                    <p><strong>Modelo:</strong> Corolla Cross</p>
+    
+                    <p><strong>Año:</strong> 2023</p>
+    
+                    <p><strong>Kilómetros:</strong> 25.000 km</p>
+    
+                    <p><strong>Combustible:</strong> Nafta</p>
+    
+                    <p><strong>Transmisión:</strong> Automática</p>
+    
+                    <p><strong>Vendedor:</strong> SergioRamos</p>
+                </div>
                 <div id="opcionesComprador">
-                    <a  id="idOfertar" href="">
+                    <a  id="idOfertar" href="./EnviarOferta.html">
                         <button>
                             Ofertar
                         </button>
                     </a>
-
                     <a href="">
                         <button>
                             Comprar Ahora
                         </button>
                     </a>
                 </div>
-
-                <div id="id-formulario-oferta" class="oculto">
-
-                    <h3>Realizar una oferta</h3>
-
-                    <form id="id-oferta" novalidate>
-
-                        <label for="id-monto-oferta"> ¿Cuánto dinero querés ofrecer? </label>
-                        <input id="id-monto-oferta" name="monto-oferta" type="number">
-                        <small id="id-error-monto"></small>
-
-                        <label for="id-cuotas-oferta"> Cantidad de cuotas: </label>
-                        <select id="id-cuotas-oferta" name="cuotas-oferta">
-                            <option value="">Seleccionar cuotas</option>
-                            <option value="1">1 cuota</option>
-                            <option value="3">3 cuotas</option>
-                            <option value="6">6 cuotas</option>
-                            <option value="12">12 cuotas</option>
-                            <option value="18">18 cuotas</option>
-                            <option value="24">24 cuotas</option>
-                        </select>
-                        <small id="id-error-cuotas"></small>
-
-                        <button class="boton" type="submit">
-                            Enviar oferta
-                        </button>
-
-                    </form>
-
-                    <p id="id-mensaje-oferta"></p>
-
-                </div>
-
-
             </div>
-
         </section>
         <div id="PreguntasComentarios">
             <section>
@@ -126,7 +90,6 @@
                 <div class="comentarios">
                     <h2>Comentarios</h2>
                     <div id="listaComentarios">
-
                         <div class="comentario">
                             <div class="NombreUsuarioComentador">
                                 <img src="./img/usuario.png" alt="Usuario">

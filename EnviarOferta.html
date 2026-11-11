@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autos copados | Enviar Oferta</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/EnviarOferta.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a class="marca" href="inicio.html">Autos copados</a>
+            <img src="./img/iconos/tresL.png" alt="" id="IconoOP"> 
+        </div>
+        <nav id="Menu" class="Cerrado" >
+            <ul class="menu">
+                <li class="publico"><a href="inicio.html">Inicio</a></li>
+                <li class="publico"><a href="login.html">LOG IN</a></li>
+                <li class="publico"><a href="registro.html">Registrarse</a></li>                
+                <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
+                <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li>        
+            </ul>
+        </nav>
+    </header>    
+    <main id="Cuerpo" class="">
+        <div id="Datos">
+
+        </div>
+        <div id="DatosAuto">
+            <div id="IMGAuto">
+                <img src="./img/imagen4.webp" alt="">
+            </div>
+            <div class="contenedor">
+                <h1>Toyota Pro Premiun</h1>
+                <div class="DatosUsuario">
+                    <img src="./img/iconos/usuario.png" alt="usuario">
+                    <div>
+                        <p>Vendedor: <strong>Hernan korecki</strong></p>
+                        <p>correo: <strong>hola@gmail.com</strong></p>
+                    </div>
+                </div>
+                <div id="PrecioV">
+                    <p>Monto Propuesto:</p>
+                    <h1>2.432.312,00$</h1>
+                </div>
+            </div>
+        </div>
+        <div id="DatosOferta" class="contenedor">
+            <h1>Tu Propuesta</h1>
+            <form action="" method="post">
+                <div class="ElementoF">
+                    <label for="Monto">Monto dispuesto a Pagar:</label>
+                    <input type="number" id="Monto">
+                </div>
+
+                <div class="ElementoF">
+                    <label for="Cutoas">Cuotas:</label>
+                    <input type="number" id="Cuotas">
+                </div>
+                <div class="DatosUsuario">
+                    <img src="./img/iconos/usuario.png" alt="usuario">
+                    <div>
+                        <p>Comprador: <strong>Hernan korecki</strong></p>
+                        <p>correo: <strong>Hola2@gmail.com</strong></p>
+                    </div>
+                </div>
+                <div>
+                    <a href="./inicio.html">
+                        <button type="submit">Enviar Propuesta</button>
+                    </a>
+                </div>
+                
+            </form>
+            
+        </div>
+
+    </main>
+    <script src="./js/Menu.js"></script>
+</body>
+</html>

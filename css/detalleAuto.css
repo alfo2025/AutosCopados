@@ -2,8 +2,8 @@ body{
     background-color: rgb(14, 106, 143);
 }
 
-.detalle-auto {
-    display: flex;
+#DetalleAuto{
+    display: block;
     gap: 20px;
     background-color: rgb(56, 174, 176);
     padding: 10px;
@@ -11,7 +11,7 @@ body{
 }
 
 #ImagenAuto {
-    width: 55%;
+    width: 100%;
     height: 400px;
     object-fit: cover;
     overflow: hidden;
@@ -22,8 +22,11 @@ body{
     object-position: -50px 0px;
 }
 
-.detalle-info h2 {
-    font-size: 30px;
+
+#DetalleInfoAuto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0% 10%;
 }
 
 .NombreUsuarioComentador{
@@ -61,9 +64,6 @@ body{
 #Pregunta{
     margin: 45px 0px;
 }
-.DetalleAuto{
-    margin: 0px 40px;
-}
 
 #PreguntasComentarios{
     display: grid;
@@ -96,11 +96,25 @@ body{
     color: rgb(5, 46, 82);
 }
 
-@media (min-width: 1000px) {
+@media (min-width:760px)
+{
+    #DetalleInfoAuto{
+        display: block;
+    }
+    #ImagenAuto{
+        width: 55%;
+    }
+    #DetalleAuto{
+        display: flex;
+    }
+}
 
+@media (min-width: 1000px) {
+    
     #PreguntasComentarios{
     gap: 15px;
     grid-template-areas: 
     "section main" 
     }
+    
 }

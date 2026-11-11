@@ -10,6 +10,17 @@ input{
    width: 100%;
 }
 
+body::-webkit-scrollbar{
+  background: #2c9ca8;
+  border-radius: 20px;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #0b6670;
+  border-radius: 20px;
+}
+
 .Busqueda{
    display: flex;
    object-fit: cover;
@@ -19,7 +30,7 @@ input{
 }
 
 .Busqueda input{
-   background-color: rgb(15, 154, 145);;
+   background-color: rgb(15, 154, 145);
    color: #d8e1e3;
 }
 
