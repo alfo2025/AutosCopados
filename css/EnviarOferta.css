@@ -75,7 +75,7 @@ label{
     color: aliceblue;
 }
 @media (min-width:700px){
-    #DatosAuto{
+    #DatosAuto{ 
         display: flex;
     }
     #IMGAuto{
@@ -96,8 +96,11 @@ label{
     #DatosOferta{
         height: 80vh;
     }
-    
+    #IMGAuto{
+        width: 100%;
+    }
     #DatosAuto{
+        display: block;
         width: 500px;
     }
 
