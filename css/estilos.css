@@ -12,7 +12,6 @@ input{
 
 body::-webkit-scrollbar{
   background: #2c9ca8;
-  border-radius: 20px;
   width: 10px;
 }
 

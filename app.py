@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def inicio():
-    pagina = render_template("inicio.html", datos = {})
+    pagina = render_template("inicio.html")
     return pagina
 
 

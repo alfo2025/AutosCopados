@@ -47,15 +47,16 @@
             </div>
             <div id="DatosOferta" class="contenedor">
                 <h1>Tu Propuesta</h1>
-                <form action="" method="post">
+                <form action="" method="post" id="formularioOferta">
                     <div class="ElementoF">
                         <label for="Monto">Monto dispuesto a Pagar:</label>
-                        <input type="number" id="Monto">
+                        <input type="number" id="Monto" name="Monto">
+                        <p id="MensajeMonto" class="oculto">Mensaje del Monto</p>
                     </div>
     
                     <div class="ElementoF">
                         <label for="Cutoas">Cuotas:</label>
-                        <input type="number" id="Cuotas">
+                        <input type="number" id="Cuotas" name="Cuotas">
                     </div>
                     <div class="DatosUsuario">
                         <img src="./img/iconos/usuario.png" alt="usuario">
@@ -64,18 +65,16 @@
                             <p>correo: <strong>Hola2@gmail.com</strong></p>
                         </div>
                     </div>
-                    <div>
+                    <div id="Enviar">
                         <a href="./inicio.html">
                             <button type="submit">Enviar Propuesta</button>
                         </a>
                     </div>
-                    
                 </form>
-                
             </div>
         </div>
-
     </main>
+    
     <footer class="pie">
 
         <div class="contenedor">
@@ -84,5 +83,6 @@
 
     </footer>
     <script src="./js/Menu.js"></script>
+    <script src="./js/EnviarOferta.js"></script>
 </body>
 </html>
