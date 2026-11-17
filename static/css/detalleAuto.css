@@ -1,0 +1,120 @@
+body{
+    background-color: rgb(14, 106, 143);
+}
+
+#DetalleAuto{
+    display: block;
+    gap: 20px;
+    background-color: rgb(56, 174, 176);
+    padding: 10px;
+    color: aliceblue;
+}
+
+#ImagenAuto {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#ImagenAuto img{
+    height: 100%;
+    object-position: -50px 0px;
+}
+
+
+#DetalleInfoAuto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0% 10%;
+}
+
+.NombreUsuarioComentador{
+    padding: 20px;
+    display: flex;
+    img{
+        width: 30px;
+        height: 30px;
+    }
+    h3{
+        margin: 4px 10px;
+    }
+}
+
+.comentario{
+    p{
+        margin: 0px 50px;
+    }
+    background-color: rgb(144, 255, 205);
+    border-radius: 20px;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.comentarios{
+    background-color: rgb(95, 220, 183);
+    border-radius: 20px;
+    padding: 5px;
+    height: 500px;
+    object-fit: cover;
+    overflow:scroll;
+    
+}
+
+#Pregunta{
+    margin: 45px 0px;
+}
+
+#PreguntasComentarios{
+    display: grid;
+    grid-template-areas: 
+    "section" 
+    "main"
+}
+
+.oculto {
+    display: none;
+}
+
+.invalido {
+    border: 2px solid red;
+    background-color: red;
+
+}
+
+#Preguntar{
+    background-color: rgb(56, 174, 176);
+    color: aliceblue;
+    padding: 10px;
+}
+
+#Preguntar input{
+    width: 98%;
+    background-color: rgb(37, 224, 208);
+    border-style: none;
+    border-radius: 13px;
+    color: rgb(5, 46, 82);
+}
+
+@media (min-width:760px)
+{
+    #DetalleInfoAuto{
+        display: block;
+    }
+    #ImagenAuto{
+        width: 55%;
+    }
+    #DetalleAuto{
+        display: flex;
+    }
+}
+
+@media (min-width: 1000px) {
+    
+    #PreguntasComentarios{
+    gap: 15px;
+    grid-template-areas: 
+    "section main" 
+    }
+    
+}

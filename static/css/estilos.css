@@ -1,0 +1,205 @@
+#IconoOP{
+   width: 30px;
+}
+.cabecera li{
+   align-self: center;
+}
+
+input{
+   height: 38px;
+   width: 100%;
+}
+
+body::-webkit-scrollbar{
+  background: #2c9ca8;
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #0b6670;
+  border-radius: 20px;
+}
+
+.Busqueda{
+   display: flex;
+   object-fit: cover;
+   overflow: hidden;
+   border-radius: 60px;
+   margin: 20px 0px;
+}
+
+.Busqueda input{
+   background-color: rgb(15, 154, 145);
+   color: #d8e1e3;
+}
+
+.Busqueda *{
+   border-style: none;
+}
+
+.Cerrado{
+   display: none;
+}
+
+button{
+   height: 40px;
+   border-style: none;
+   background-color: #174b52;
+   color: #fff;
+   font-size: 100%;
+}
+
+
+.Abierto{
+   display: flex;
+   gap: 6px;
+   margin: 0;
+   padding: 0;
+   height: 98vh;
+}
+
+.Abierto a{
+   color: #fff;
+   display: block;
+   padding: 10px 12px;
+   text-decoration: none;
+}
+
+.menu li{
+   margin: 30px 0px;
+   list-style: none;
+}
+
+body {
+   background: #f5f7f8;
+   color: #25313c;
+   font-family: Arial, sans-serif;
+   line-height: 1.5;
+   margin: 0;
+}
+
+h1,h2,h3 {
+   color: #174b52;
+   line-height: 1.2;
+}
+
+h1 {
+   margin-top: 0;
+}
+
+a {
+   color: #0b6670;
+}
+
+.contenedor {
+   margin: 0 0px;
+   padding: 0 20px;
+}
+
+.cabecera {
+   background: #0b6670;
+}
+
+.cabecera-contenido {
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+   min-height: 76px;
+}
+
+.marca {
+   color: #fff;
+   font-size: 1.25rem;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+
+
+.menu a:hover,
+.menu .activo {
+   background: rgba(13, 132, 132, 0.993);
+}
+
+
+.introduccion {
+   margin-bottom: 36px;
+}
+
+
+
+.encabezado-pagina {
+   margin-top: 0;
+}
+
+
+
+.tarjetas {
+   display: grid;
+   gap: 18px;
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.tarjeta {
+   background: #fff;
+   border: 1px solid #d8e1e3;
+   border-top: 4px solid #0b6670;
+   padding: 20px;
+}
+
+footer{
+   background-color: #25313c;
+   color: #d8e1e3;
+   height: 50px;
+}
+
+footer p{
+   margin: 0px;
+}
+
+@media (min-width: 1000px){
+.menu {
+   display: flex;
+   list-style: none;
+   gap: 6px;
+   margin: 0;
+   padding: 0;
+}
+.menu a {
+   color: #fff;
+   display: block;
+   padding: 10px 12px;
+   text-decoration: none;
+}
+
+.Cerrado{
+   display: block;
+}
+
+#IconoOP{
+   display: none;
+}
+
+header{
+   display: flex;
+   justify-content:space-between;
+}
+
+.Abierto{
+   display: block;
+   list-style: none;
+   gap: 6px;
+   margin: 0;
+   padding: 0;
+   height: auto;
+}
+
+.Abierto a{
+   color: #fff;
+   display: block;
+   padding: 10px 12px;
+   text-decoration: none;
+   
+}
+
+}

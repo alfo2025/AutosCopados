@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos copados | log in</title>
+    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link rel="stylesheet" href={{css}}>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a class="marca" href="inicio.html">Autos copados</a>
+            <img src="../static/img/iconos/tresL.png" alt="" id="IconoOP"> 
+        </div>
+        <nav id="Menu" class="Cerrado" >
+            <ul class="menu">
+                <li class="publico"><a class="activo" href="inicio.html">Inicio</a></li>
+                <li class="publico"><a  href="login.html">LOG IN</a></li>
+                <li class="publico"><a href="registro.html">Registrarse</a></li>                
+                <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
+                <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li> 
+                <li class="usuario"><a href="./AprobarOfertas.html">Noctificacion de ofertas</a></li>       
+            </ul>
+        </nav>
+    </header>
+    <main id="Cuerpo">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="pie"><div class="contenedor"><p>autos copados - Proyecto PWM</p></div></footer>
+</body>
+</html>
