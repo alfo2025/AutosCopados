@@ -38,7 +38,7 @@ VALUES  (1, 1, 'Corolla XEI', '2026-01-10', 'corolla.jpg', 45000, 'Nafta', 18500
         (3, 5, 'Onix LTZ', '2016-02-20', 'onix.jpg', 51000, 'Nafta', 13900000, 'Suspendido'),
         (4, 6, 'Kicks Exclusive', '2017-03-01', 'kicks.jpg', 19000, 'Nafta', 23500000, 'Disponible'),
         (5, 7, 'Clase A 200', '2011-03-05', 'clase_a.jpg', 30000, 'Nafta', 38500000, 'Oculto');
---- 4 11 23
+
 INSERT INTO `oferta` (id_pubAuto, id_comprador, monto, fecha_ofertado, estado, cuotas)
 VALUES  (1, 2, 17500000, '2026-04-01', 'Enviada', 12),
         (1, 3, 1450000, '2025-09-01', 'Enviada', 12),

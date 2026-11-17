@@ -82,7 +82,6 @@ function validarFormulario(evento){
         mensaje.textContent = "Formulario ingresado Correctamente"
         mensaje.classList.remove("Invalido")
         mensaje.classList.add("valido")
-        evento.preventDefault()
         imgLogin.src = "./img/Anuncio/anuncio2.jpg"
     }
     else{

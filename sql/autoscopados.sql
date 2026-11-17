@@ -116,7 +116,7 @@ CREATE TABLE `usuario` (
   `nombre` varchar(20) NOT NULL,
   `apellido` varchar(20) NOT NULL,
   `mail` varchar(30) NOT NULL,
-  `clave` int(20) NOT NULL,
+  `clave` varchar(20) NOT NULL,
   `fechaNacimiento` date NOT NULL,
   `dni` int(11) NOT NULL,
   `fotoDNIF` varchar(300) NOT NULL,
