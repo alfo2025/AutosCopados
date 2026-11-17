@@ -15,17 +15,21 @@
         </div>
         <nav id="Menu" class="Cerrado" >
             <ul class="menu">
-                <li class="publico"><a class="activo" href="inicio.html">Inicio</a></li>
-                <li class="publico"><a  href="login.html">LOG IN</a></li>
-                <li class="publico"><a href="registro.html">Registrarse</a></li>                
+                {% if session.get('id') %}                
                 <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
                 <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li> 
-                <li class="usuario"><a href="./AprobarOfertas.html">Noctificacion de ofertas</a></li>       
+                <li class="usuario"><a href="./AprobarOfertas.html">Noctificacion de ofertas</a></li>  
+                {% else %}
+                <li class="publico"><a class="activo" href="{{url_for('inicio')}}">Inicio</a></li>
+                <li class="publico"><a  href="{{url_for('login')}}">LOG IN</a></li>
+                <li class="publico"><a href="registro.html">Registrarse</a></li>
+                {%endif%}   
             </ul>
         </nav>
     </header>
-    <main id="Cuerpo">
+    <main id="Cuerpo" class="{{clase}}">
         {% block content %}{% endblock %}
+        <script src="{{url_for('static', filename = 'js/Menu.js')}}"></script>
     </main>
     <footer class="pie"><div class="contenedor"><p>autos copados - Proyecto PWM</p></div></footer>
 </body>

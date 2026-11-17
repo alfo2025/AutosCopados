@@ -4,13 +4,18 @@
         <img src="../static/img/pantallaInicio.jpg" alt="">
     </section>
     <div class="contenedor">
-        <h2>Que esperas para tu primera compra!!!</h2>
+        {% if session.get('id') %}
         <div class="Busqueda">
             <input type="text" name="" id="">
             <a href="ListaAutosComprador.html">
                 <button>Buscar</button>
             </a>
         </div>
+        {% else %}
+        <div>
+            <h2>Que esperas para tu primera compra, registrate para ver las ofertas disponibles!!!!</h2>
+        </div>
+        {% endif %}
         <section class="tarjeta">
             <h3>Los Mejores Precios en Autos</h3>
             <p>Encontra las mejores ofertas en Autos ya usados</p>
@@ -24,5 +29,4 @@
             <p>nosotros gestionamos todo a cualquier hora para minimizar cualquier inconveniente que pueda tener</p>
         </section>
     </div>
-    <script src={{js}}></script>
 {%endblock%}
