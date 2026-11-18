@@ -7,7 +7,7 @@
                 <button type="submit">Buscar:</button>
             </form>
         </div>
-        {% if autos != "No se encontraron autos" %}
+        {% if not autos is string %}
         
         <div class="Contenido">
             <nav class="Filtro">
@@ -52,7 +52,7 @@
                 <a href="{{url_for("DetalleAuto", id = pubAuto["id"])}}" class="linkAuto">
                     <article class="TargAuto Muestra">
 
-                        <img src="static/img/imagen1.webp" alt="Toyota Corolla Cross">
+                        <img src="{{url_for('static', filename = "img/Autos/"+pubAuto["foto"])}}" alt="Toyota Corolla Cross">
 
                         <div class="TargAutoInfo">
                             <h3>{{pubAuto["modelo"]}}</h3>
@@ -69,6 +69,7 @@
         {% else %}
         <div>
             <h2>{{autos}}</h2>
+            <img src="{{url_for("static", filename= "img/nohay.gif")}}" alt="">
         </div>
         {% endif %}
         

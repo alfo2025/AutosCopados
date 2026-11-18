@@ -18,8 +18,7 @@ body{
 }
 
 #ImagenAuto img{
-    height: 100%;
-    object-position: -50px 0px;
+    width: 100%;
 }
 
 

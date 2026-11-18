@@ -94,7 +94,7 @@ def ListaAutosC(nombre):
     elif UsuarioConectado():
         autos = BuscarPubAutoNombre('%'+nombre+'%')
         if autos is None:
-            autos = "No se encontraron autos"
+            autos = "No se encontraron resultados con modelos q tengan '{}'".format(nombre)
         Respuesta = render_template("listar_autos_comprador.html", autos = autos, css = css, idbody = idbody, valor = nombre)
     else:
         Respuesta = redirect(url_for("login"))
