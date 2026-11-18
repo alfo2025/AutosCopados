@@ -8,11 +8,11 @@
         <div>
             <h2>Hola {{session.get('nombre')}}</h2>
         </div>
-        <div class="Busqueda">
-            <input type="text" name="" id="">
-            <a href="ListaAutosComprador.html">
-                <button>Buscar</button>
-            </a>
+        <div >
+            <form method="post" class="Busqueda">
+                <input type="text" name="nombreA" id="">
+                <button type="submit">Buscar</button>
+            </form>
         </div>
         {% else %}
         <div>

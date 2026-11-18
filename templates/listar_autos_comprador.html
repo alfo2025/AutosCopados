@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{%block content%}
+        <h2>Autos</h2>
+        <div>
+            <form method="post" class= "Busqueda">
+                <input type="text" name="nombreA" value={{valor}}>
+                <button type="submit">Buscar:</button>
+            </form>
+        </div>
+        {% if autos != "No se encontraron autos" %}
+        
+        <div class="Contenido">
+            <nav class="Filtro">
+                <h3>Filtros:</h3>
+                <div class="ConjuntoFiltro">
+                    <h3>Marcas</h3>
+                    <div class="listaMarcas">
+                        <div class="checkFiltro">
+                            <input type="checkbox" name="Ford">
+                            <p>Ford</p>
+                        </div>
+                        <div class="checkFiltro">
+                            <input type="checkbox" name="Mercedes Benz">
+                            <p>Mercedes Benz</p>
+                        </div>
+                        <div class="checkFiltro">
+                            <input type="checkbox" name="Hyundai">
+                            <p>Hyundai</p>
+                        </div>
+                        <div class="checkFiltro">
+                            <input type="checkbox" name="Peugeot">
+                            <p>Peugeot</p>
+                        </div>
+                        <div class="checkFiltro">
+                            <input type="checkbox" name="Smart">
+                            <p>Smart</p>
+                        </div>
+                        <div class="checkFiltro">
+                            <input type="checkbox" name="Toyota">
+                            <p>Toyota</p>
+                        </div>
+                        <div class="checkFiltro">
+                            <input type="checkbox" name="Audi">
+                            <p>Audi</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="ListadoTargAuto">
+                {% for pubAuto in autos %}
+                <a href="{{url_for("DetalleAuto", id = pubAuto["id"])}}" class="linkAuto">
+                    <article class="TargAuto Muestra">
+
+                        <img src="static/img/imagen1.webp" alt="Toyota Corolla Cross">
+
+                        <div class="TargAutoInfo">
+                            <h3>{{pubAuto["modelo"]}}</h3>
+                            <p>Precio:</p>
+                            <p class="Precio"><strong>$ {{pubAuto["precio"]}} </strong></p>
+                            <p>vendedor: <strong>{{pubAuto["Nvendedor"]}} {{pubAuto["Avendedor"]}}</strong></p>
+                        </div>
+
+                    </article>
+                </a>
+                {% endfor %}
+            </section>
+        </div>
+        {% else %}
+        <div>
+            <h2>{{autos}}</h2>
+        </div>
+        {% endif %}
+        
+{% endblock %}

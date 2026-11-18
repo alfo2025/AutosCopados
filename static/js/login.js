@@ -94,7 +94,7 @@ function validarFormulario(evento){
 }
 
 function prepararPagina(){
-    if(ErrorM.textContent == "")
+    if(ErrorM.textContent != "")
         imgLogin.src = "../static/img/sospechoso.jpg"
 
     claveInput.addEventListener('keyup', validarClave)

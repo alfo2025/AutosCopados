@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+    <section id="DetalleAuto">
+            <div id="ImagenAuto">
+                <img src="static/img/imagen1.webp" alt="Toyota Corolla Cross">
+            </div>
+
+            <div class="DetalleInfo">
+
+                <h1>{{PubAuto["modelo"]}}</h1>
+
+                <h2>${{PubAuto["precio"]}}</h2>
+
+                <div id="DetalleInfoAuto">
+                    <p><strong>Marca:</strong> {{PubAuto["Marca"]}}</p>
+    
+                    <p><strong>Modelo:</strong> {{PubAuto["modelo"]}}</p>
+    
+                    <p><strong>Año:</strong> {{PubAuto["fecha"]}}</p>
+    
+                    <p><strong>Kilómetros:</strong> {{PubAuto["km"]}} km</p>
+    
+                    <p><strong>Combustible:</strong> {{PubAuto["combustible"]}}</p>
+    
+                    <p><strong>Vendedor:</strong> {{PubAuto["Nvendedor"]}}</p>
+                </div>
+                <div id="opcionesComprador">
+                    <a  id="idOfertar" href="./EnviarOferta.html">
+                        <button>
+                            Ofertar
+                        </button>
+                    </a>
+                    <a href="">
+                        <button>
+                            Comprar Ahora
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div id="PreguntasComentarios">
+            <section>
+                <form method="post" id="Preguntar">
+                    <div>
+                        <label for="PreguntaComprador">
+                            Preguntar:
+                        </label>
+                        <input type="text" name="PreguntaComprador" id="PreguntaComprador">
+                    </div>
+                    <button class="boton" type="submit">
+                        Enviar
+                    </button>
+                </form>
+            </section>
+            <section>
+                <div class="comentarios">
+                    <h2>Comentarios</h2>
+                    <div id="listaComentarios">
+                        {% if comentarios == "No hubo comentarios" %}
+                            <h2>{{comentarios}}</h2>
+                        {% else %}
+                            {% for c in comentarios %}
+                            <div class="comentario">
+                                <div class="NombreUsuarioComentador">
+                                    <img src="./img/usuario.png" alt="Usuario">
+                                    <h3>{{c["Unombre"]}}</h3>
+                                    <p>{{c["fecha"]}}</p>
+                                </div>
+                                <p>{{c["texto"]}}</p>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </section>
+        </div>
+{% endblock %}

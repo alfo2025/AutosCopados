@@ -87,3 +87,7 @@ INNER JOIN usuario U ON O.id_comprador = U.id
 INNER JOIN metodopago M ON C.id_metodoPago = M.id
 INNER JOIN publicacion_auto P ON O.id_pubAuto = P.id
 ORDER BY o.monto
+
+select id, modelo, foto, precio, km
+    from publicacion_auto
+    where modelo = '%u%'
