@@ -11,7 +11,7 @@
         </section>
     
         <section>
-             <form id="formulario-login" action="#" method="post">
+             <form id="formulario-login" method="POST">
                 <div class="">
                     <div class="titulo">
                         <label for="correo-usuario">Correo de usuario</label>
@@ -19,7 +19,7 @@
                             <img src="static/img/bienmal.jpg" alt="" class="iconoIMG">
                         </div>
                     </div>
-                    <input id="correo-usuario" name="correo-usuario" type="text" class="">
+                    <input id="correo-usuario" name="correo" type="text" class="">
                     <p id="MensajeCorreo" class="oculto">Respuesta referida al correo</p>
                 </div>
                 <div class="">
@@ -29,10 +29,11 @@
                             <img src="static/img/bienmal.jpg" alt="" class="iconoIMG">
                         </div>
                     </div>
-                    <input id="clave-usuario" name="clave-usuario" type="password" class="">
+                    <input id="clave-usuario" name="clave" type="password" class="">
                     <p id="MensajeClave" class="oculto">mensaje clave</p>
                 </div>
                 <p id="MensajeAprobacion" class="">Ingrese los datos para ingesar a la secion</p>
+                <p id="ErrorM" class="Invalido">{{error}}</p>
                 <div class="acciones-formulario">
                     <button id="boton-guardar" class="boton" type="submit">Ingresar</button>
                     <button id="boton-limpiar" class="boton boton-secundario" type="reset">Limpiar</button>

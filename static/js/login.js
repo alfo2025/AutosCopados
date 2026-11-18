@@ -7,6 +7,7 @@ const mensajeClave = document.querySelector('#MensajeClave')
 const iconosValidacion = document.getElementsByClassName('iconoIMG')
 const formulario = document.querySelector("#formulario-login")
 const imgLogin = document.querySelector("#IMGLogin")
+const ErrorM = document.querySelector("#ErrorM")
 
 function validarCorrreo() {
     const CorreoLimpio = correoInput.value.trim()
@@ -70,8 +71,7 @@ function cambiarVisual(condicion, icono, input, mens, textMensaje){
     }
 }
 
-claveInput.addEventListener('keyup', validarClave)
-correoInput.addEventListener('keyup', validarCorrreo)
+
 
 
 function validarFormulario(evento){
@@ -82,15 +82,24 @@ function validarFormulario(evento){
         mensaje.textContent = "Formulario ingresado Correctamente"
         mensaje.classList.remove("Invalido")
         mensaje.classList.add("valido")
-        imgLogin.src = "./img/Anuncio/anuncio2.jpg"
+        imgLogin.src = "../static/img/Anuncio/anuncio2.jpg"
     }
     else{
         mensaje.textContent = "Los datos ingresados son erroneos o no cumplen las condiciones, vuelva a intentarlo"
         mensaje.classList.add("Invalido")
         mensaje.classList.remove("valido")
         evento.preventDefault()
-        imgLogin.src = "./img/sospechoso.jpg"
+        imgLogin.src = "../static/img/sospechoso.jpg"
     }
 }
 
-formulario.addEventListener("submit", (e) => validarFormulario(e));
+function prepararPagina(){
+    if(ErrorM.textContent == "")
+        imgLogin.src = "../static/img/sospechoso.jpg"
+
+    claveInput.addEventListener('keyup', validarClave)
+    correoInput.addEventListener('keyup', validarCorrreo)
+    formulario.addEventListener("submit", (e) => validarFormulario(e))
+}
+
+prepararPagina()

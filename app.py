@@ -1,5 +1,5 @@
 import os
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request, session, url_for
 from config import CONFIG_DB
 from utilidades._mysql_db import deleteDB, insertDB, selectDB, updateDB
 from utilidades.request_utils import getRequest
@@ -19,7 +19,7 @@ def inicio():
     pagina = render_template("inicio.html", css = css)
     return pagina
 
-@app.route("/Login", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
     css = '../static/css/LoginRegistrase.css'
     js = '../static/js/login.js'
@@ -27,9 +27,37 @@ def login():
     error = ""
     Respuesta = None
     
+    if request.method == "POST":
+        datos = getRequest()
+        usuario = BuscarEmailUsuario(datos.get("correo",""))
+        credencial = False
+        print("hola, llegaste aqui")
+        if usuario:
+            clave = datos.get("clave","")
+            credencial = clave == usuario["clave"]
+            print("hola, verificando clave")
+        
+        if credencial:
+            print("Guardando datos")
+            session["id"] = usuario["id"]
+            session["Nombre"] = usuario["nombre"]
+            session["Apellido"] = usuario["apellido"]
+            session["FotoUsuario"] = usuario["fotoUsuario"]
+            session["admin"] = usuario["admin"]
+            print("Se guardaron los datos")
+            Respuesta = redirect(url_for("inicio"))
+        else:
+            error = "Email o clave erronea"
     if Respuesta == None:
-        Respuesta = render_template("login.html", css = css, js = js, clase = clase)
+        Respuesta = render_template("login.html", css = css, js = js, clase = clase, error = error)
     
+    return Respuesta
+
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    Respuesta = redirect("inicio")
     return Respuesta
 
 if __name__ == "__main__":
