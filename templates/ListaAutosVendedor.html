@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+            <div id="PerfilVendedor">
+                <img src="static/img/iconos/usuario.png" alt="Usuario">
+
+                <div>
+                    <h2>Nombre de usuario</h2>
+                    <p>autos vendidos: 0</p>
+                    <p>total de autos: 6</p>
+                </div>
+            </div>
+
+            <h2>Gestion de publicaciones</h2>
+
+            <div class="Busqueda">
+                <input type="text">
+                <a href="ListaAutosVendedor.html">
+                    <button>Buscar</button>
+                </a>
+            </div>
+
+            <a class="opcionVendedor" href="./PublicarAutoVendedor.html">
+                Publicar auto nuevo
+            </a>
+            {% if PubAutos is string %}
+            <h2>{{PubAuto}}</h2>
+            {% else %}
+            <div class="Contenido">
+                <nav class="Filtro">
+                    <h3>Filtros:</h3>
+                    <div class="ConjuntoFiltro">
+                        <h3>Marcas</h3>
+                        <div class="listaMarcas">
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Ford">
+                                <p>Ford</p>
+                            </div>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Mercedes Benz">
+                                <p>Mercedes Benz</p>
+                            </div>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Hyundai">
+                                <p>Hyundai</p>
+                            </div>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Peugeot">
+                                <p>Peugeot</p>
+                            </div>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Smart">
+                                <p>Smart</p>
+                            </div>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Toyota">
+                                <p>Toyota</p>
+                            </div>
+                            <div class="checkFiltro">
+                                <input type="checkbox" name="Audi">
+                                <p>Audi</p>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <section class="ListadoTargAuto">
+                    {% for pub in PubAutos %}
+                    <article class="TargAuto Disponible Vendedor">
+                        <img src="{{url_for('static', filename = "img/Autos/"+pub["foto"])}}" alt="{{pub["foto"]}}">
+                        <div class="TargAutoInfo">
+                            <h3>{{pub["modelo"]}}</h3>
+                            <p>Precio:</p>
+                            <p class="Precio"><strong>${{pub["precio"]}}</strong></p>
+                            <div class="accionesVendedor">
+                                <a href="detalleAuto.html" class="opcionVendedor verDetalles">
+                                    Ver detalles
+                                </a>
+                                <button class="opcionVendedor">Modificar</button>
+                                <button class="opcionVendedor EliminarColor">Eliminar</button>
+                            </div>
+                        </div>
+                    </article>
+                    {% endfor %}
+
+                </section>
+            </div>
+            {% endif %}
+{% endblock  %}

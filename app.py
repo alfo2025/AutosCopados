@@ -5,7 +5,7 @@ from utilidades._mysql_db import deleteDB, insertDB, selectDB, updateDB
 from utilidades.request_utils import getRequest
 
 from modulos.usuarios import BuscarEmailUsuario
-from modulos.pubauto import BuscarPubAutoNombre,BuscarPubAutoID,BuscarComentarioPub,ComentarPubAutoId
+from modulos.pubauto import BuscarPubAutoNombre,BuscarPubAutoID,BuscarComentarioPub,ComentarPubAutoId,BuscarMisAutos
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "clave-solo-para-desarrollo"
@@ -105,7 +105,7 @@ def ListaAutosC(nombre):
 def DetalleAuto(id):
     Respuesta = None
     css = "css/detalleAuto.css"
-    PubAuto = BuscarPubAutoID(id)
+    PubAuto = BuscarPubAutoID(id, session["id"])
     comentarios = BuscarComentarioPub(id)
     
     if PubAuto == None:
@@ -133,7 +133,22 @@ def comentarAuto(idP, pregunta):
 
     return pagina
         
+@app.route("/autos/misAutos/")
+def MisAutos():
+    Respuesta = None
+    css = "css/ListaAutos.css"
+    idbody = "BodyVendedor"
+    if UsuarioConectado():
+        PubAutos = BuscarMisAutos(session["id"])
+        if (PubAutos is None):
+            PubAutos = "No tienes Autos, publica uno"
+        print(PubAutos)
+        Respuesta = render_template("ListaAutosVendedor.html",css = css, PubAutos = PubAutos, idbody=idbody)
+    else:
+        Respuesta = redirect(url_for("login"))
     
+    return Respuesta
+        
 
 
 if __name__ == "__main__":

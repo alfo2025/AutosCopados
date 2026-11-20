@@ -4,7 +4,9 @@
 .cabecera li{
    align-self: center;
 }
-
+.cabecera h2{
+   color: #d8e1e3;
+}
 input{
    height: 38px;
    width: 100%;

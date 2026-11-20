@@ -19,15 +19,19 @@ def BuscarPubAutoNombre(nombre):
     
     return pub
 
-def BuscarPubAutoID(id):
+def BuscarPubAutoID(id, idU):
     sql = """
         select P.id, P.modelo, P.foto, P.precio, P.km, U.nombre as 'Nvendedor', P.combustible, U.apellido as 'Avendedor', M.nombre as "Marca", P.fechaPublicacion as 'fecha'
         from publicacion_auto P
         inner join usuario U on U.id = P.id_vendedor
         inner join marca M on M.id = P.id_marca
-        where P.id = %s
+        where P.id = %s and not P.id_vendedor = %s
         """
-    PubAuto = selectDB(CONFIG_DB, sql, (id,), dictionary=True)
+    valores = (
+        id,
+        idU
+    )
+    PubAuto = selectDB(CONFIG_DB, sql, valores, dictionary=True)
     pub = None
     
     if PubAuto:
@@ -70,3 +74,16 @@ def ComentarPubAutoId(idP, idU, pregunta):
         respuesta = True
         
     return respuesta, error
+
+def BuscarMisAutos(id):
+    sql = """
+        select id, modelo, foto, precio
+        from publicacion_auto
+        where id = %s
+    """
+    Publicaciones = selectDB(CONFIG_DB,sql,(id,),dictionary=True)
+    pub = None
+    if Publicaciones:
+        pub = Publicaciones
+    return pub
+    

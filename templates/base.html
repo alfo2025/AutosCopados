@@ -10,20 +10,26 @@
 <body id={{idbody}}>
     <header class="cabecera">
         <div class="contenedor cabecera-contenido">
+            {% if session["id"] %}
+            <h2>Hola {{session.get('nombre')}}</h2>
+            {% else %}
             <a class="marca" href="{{url_for('inicio')}}">Autos copados</a>
+            {% endif %}
             <img src="{{ url_for('static', filename='img/iconos/tresL.png') }}" alt="opciones" id="IconoOP"> 
         </div>
         <nav id="Menu" class="Cerrado" >
             <ul class="menu">
                 <li class="publico"><a class="activo" href="{{url_for('inicio')}}">Inicio</a></li>
                 {% if session.get('id') %}
-                <li class="usuario"><a href="./ListaAutosVendedor.html">Gestionar mis autos</a></li>
-                <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li> 
-                <li class="usuario"><a href="./AprobarOfertas.html">Noctificacion de ofertas</a></li>  
-                <li><a href="{{url_for('logout')}}">Cerrar Sesion</a></li>                
-                {% else %}
-                <li class="publico"><a  href="{{url_for('login')}}">LOG IN</a></li>
-                <li class="publico"><a href="registro.html">Registrarse</a></li>
+                    <li class="usuario"><a href="{{url_for('MisAutos')}}">Gestionar mis autos</a></li>
+                    <li class="usuario"><a href="./AprobarOfertas.html">Noctificacion de ofertas</a></li>
+                    {% if session["admin"] %}
+                        <li class="usuario"><a href="./ListaAutosAdministrador.html">Administrar Usuarios</a></li> 
+                    {% endif %}  
+                    <li><a href="{{url_for('logout')}}">Cerrar Sesion</a></li>                
+                    {% else %}
+                    <li class="publico"><a  href="{{url_for('login')}}">LOG IN</a></li>
+                    <li class="publico"><a href="registro.html">Registrarse</a></li>
                 {%endif%}   
             </ul>
         </nav>
